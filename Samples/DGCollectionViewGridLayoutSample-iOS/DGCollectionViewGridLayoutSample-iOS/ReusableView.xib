@@ -11,28 +11,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReusableViewIdentifier" id="U6b-Vx-4bR" customClass="ReusableView" customModule="DGGridCollectionViewFlowLayoutSample_iOS" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReusableViewIdentifier" id="U6b-Vx-4bR" customClass="ReusableView" customModule="DGCollectionViewGridLayoutSample_iOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-jY-Woj">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                    <color key="backgroundColor" red="0.88059600000000005" green="0.42562499999999998" blue="0.35625699999999999" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-jY-Woj">
+                    <rect key="frame" x="5" y="0.0" width="315" height="50"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                    <color key="textColor" red="1" green="0.99254748772972334" blue="0.99821930019598082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.196931671" green="0.196931671" blue="0.196931671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <color key="backgroundColor" red="0.82174707528928981" green="0.83328331430150471" blue="0.84753481217616577" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Q70-jY-Woj" secondAttribute="trailing" id="AkZ-sq-bfs"/>
                 <constraint firstItem="Q70-jY-Woj" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Cad-FZ-ukI"/>
-                <constraint firstItem="Q70-jY-Woj" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="gIi-gE-CMs"/>
+                <constraint firstItem="Q70-jY-Woj" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="5" id="gIi-gE-CMs"/>
                 <constraint firstAttribute="bottom" secondItem="Q70-jY-Woj" secondAttribute="bottom" id="jyo-Pm-wOD"/>
             </constraints>
             <connections>
                 <outlet property="textLabel" destination="Q70-jY-Woj" id="m7s-eo-xDG"/>
             </connections>
-            <point key="canvasLocation" x="-18" y="43"/>
+            <point key="canvasLocation" x="-308" y="-102"/>
         </collectionReusableView>
     </objects>
 </document>

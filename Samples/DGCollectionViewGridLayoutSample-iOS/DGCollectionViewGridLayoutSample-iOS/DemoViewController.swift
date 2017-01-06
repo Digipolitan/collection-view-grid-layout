@@ -31,9 +31,9 @@ class DemoViewController: UIViewController {
 		self.collectionView.dataSource = self
 
 		let layout =  DGCollectionViewGridLayout()
-		layout.lineSpacing = 10
-		layout.columnSpacing = 10
-		layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+//		layout.lineSpacing = 10
+//		layout.columnSpacing = 10
+//		layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
 		self.collectionView.collectionViewLayout = layout
 	}
@@ -45,11 +45,11 @@ class DemoViewController: UIViewController {
 }
 
 extension DemoViewController: DGGridLayoutDelegate {
-	func collectionView(_ collectionView: UICollectionView,
-	                    layout collectionViewLayout: DGCollectionViewGridLayout,
-	                    heightForFooterInSection section: Int) -> CGFloat {
-		return 40
-	}
+//	func collectionView(_ collectionView: UICollectionView,
+//	                    layout collectionViewLayout: DGCollectionViewGridLayout,
+//	                    heightForFooterInSection section: Int) -> CGFloat {
+//		return 40
+//	}
 
 	func collectionView(_ collectionView: UICollectionView,
 	                    layout collectionViewLayout: DGCollectionViewGridLayout,
@@ -70,17 +70,17 @@ extension DemoViewController: DGGridLayoutDataSource {
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 100
+		return 10
 	}
 
-	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
-		return 3
-	}
+//	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
+//		return 3
+//	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PathCell.Identifier, for: indexPath) as? PathCell
 		cell?.textLabrel.text = "(\(indexPath.section), \(indexPath.item))"
-		cell?.contentView.backgroundColor = indexPath.item % 2 == 0 ? .purple : .lightGray
+		cell?.contentView.backgroundColor = indexPath.item % 2 == 0 ? .brown : UIColor.darkGray
 		return cell!
 	}
 
