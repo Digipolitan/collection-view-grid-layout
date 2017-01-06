@@ -46,8 +46,6 @@ end
 
 You can customize the component by enabling few options:
 
--  You can configure the layout with few attributes
-
 ```swift
 layout.lineSpacing = 10
 layout.columnSpacing = 10
@@ -56,7 +54,7 @@ layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
 ### Interacting with the component
 
-- To Communicate with the layout, use the same way than `UICollectionViewFlowLayout`. Declare your component as `DGGridLayoutDelegate` and `DGGridLayoutDataSource`, those inheriting respectively from `UICollectionViewDelegate` and `UICollectionViewDataSource` you just have to assign it to your `collectionView`.
+To Communicate with the layout, use the same way than `UICollectionViewFlowLayout`. Declare your component as `DGGridLayoutDelegate` and `DGGridLayoutDataSource`, those inheriting respectively from `UICollectionViewDelegate` and `UICollectionViewDataSource` you just have to assign it to your `collectionView`.
 
 ```swift
 self.collectionView.delegate = self
@@ -90,7 +88,7 @@ no footer will be displayed.
                                           heightForFooterInSection section: Int) -> CGFloat
 ```
 
-- DataSource
+- DGGridLayoutDataSource
 
 ```swift
 /**
