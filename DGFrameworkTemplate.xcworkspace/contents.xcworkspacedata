@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DGFrameworkTemplate.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGFrameworkTemplateSample-iOS/DGFrameworkTemplateSample-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGFrameworkTemplateSample-watchOS/DGFrameworkTemplateSample-watchOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGFrameworkTemplateSample-tvOS/DGFrameworkTemplateSample-tvOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGFrameworkTemplateSample-OSX/DGFrameworkTemplateSample-OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
