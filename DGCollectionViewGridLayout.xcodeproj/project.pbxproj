@@ -10,9 +10,9 @@
 		80A0F5A7F9576DC6A1B9C196 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A4148AD88594E9E64A9C33 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */; };
 		90814C946970534771FED99E /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A66CEC6D7F848E2B8B1CA8C /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */; };
 		A3169DBA1DE05E8300BABAFD /* DGCollectionViewGridLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169DB01DE05E8300BABAFD /* DGCollectionViewGridLayout.framework */; };
-		A3169DD61DE0631900BABAFD /* TemplateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3169DD41DE0631900BABAFD /* TemplateClass.swift */; };
 		A3169E761DE083D900BABAFD /* DGCollectionViewGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A38EF2CA1DECF97000637484 /* DGCollectionViewGridLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGCollectionViewGridLayoutTests.swift */; };
+		AED4432B1E1F9C9F00AD7D62 /* DGGridCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4432A1E1F9C9F00AD7D62 /* DGGridCollectionFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,6 @@
 		A3169DB91DE05E8300BABAFD /* DGCollectionViewGridLayoutTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGCollectionViewGridLayoutTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DCC1DE0629100BABAFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3169DD11DE062A000BABAFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3169DD41DE0631900BABAFD /* TemplateClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateClass.swift; sourceTree = "<group>"; };
 		A3169DDE1DE06EF400BABAFD /* DGCollectionViewGridLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGCollectionViewGridLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DEF1DE0718900BABAFD /* DGCollectionViewGridLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGCollectionViewGridLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DF71DE0718900BABAFD /* DGCollectionViewGridLayoutTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGCollectionViewGridLayoutTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +41,7 @@
 		A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGCollectionViewGridLayout.h; sourceTree = "<group>"; };
 		A38EF2C71DECF97000637484 /* DGCollectionViewGridLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGCollectionViewGridLayoutTests.swift; sourceTree = "<group>"; };
 		A6418CC5C1904C2CE0B9BC22 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS/Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AED4432A1E1F9C9F00AD7D62 /* DGGridCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGGridCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		D9AC5A6D1FD8F04307F12119 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E127E10B3901D5535932640F /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS/Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 		A3169DCA1DE0629100BABAFD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A3169DD41DE0631900BABAFD /* TemplateClass.swift */,
+				AED4432A1E1F9C9F00AD7D62 /* DGGridCollectionFlowLayout.swift */,
 				A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */,
 				A3169DCC1DE0629100BABAFD /* Info.plist */,
 			);
@@ -208,36 +208,10 @@
 					A3169DAF1DE05E8300BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A3169DB81DE05E8300BABAFD = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 582762VK3P;
-						ProvisioningStyle = Automatic;
-					};
-					A3169DDD1DE06EF400BABAFD = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 582762VK3P;
-						ProvisioningStyle = Automatic;
-					};
-					A3169DEE1DE0718900BABAFD = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 582762VK3P;
-						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
-					};
-					A3169DF61DE0718900BABAFD = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 582762VK3P;
-						ProvisioningStyle = Automatic;
-					};
-					A3169E0B1DE072C700BABAFD = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 582762VK3P;
-						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
-					};
-					A3169E131DE072C800BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
 						ProvisioningStyle = Automatic;
@@ -376,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3169DD61DE0631900BABAFD /* TemplateClass.swift in Sources */,
+				AED4432B1E1F9C9F00AD7D62 /* DGGridCollectionFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +489,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.collectionviewgridlayout;
 				PRODUCT_NAME = DGCollectionViewGridLayout;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -535,6 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.collectionviewgridlayout;
 				PRODUCT_NAME = DGCollectionViewGridLayout;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -542,7 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9AC5A6D1FD8F04307F12119 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -556,7 +533,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35FCDEF4924A022C2077C3A2 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
