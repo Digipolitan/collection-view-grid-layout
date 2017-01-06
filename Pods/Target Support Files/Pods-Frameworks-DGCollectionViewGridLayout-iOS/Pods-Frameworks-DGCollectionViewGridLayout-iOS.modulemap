@@ -1,0 +1,6 @@
+framework module Pods_Frameworks_DGCollectionViewGridLayout_iOS {
+  umbrella header "Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
