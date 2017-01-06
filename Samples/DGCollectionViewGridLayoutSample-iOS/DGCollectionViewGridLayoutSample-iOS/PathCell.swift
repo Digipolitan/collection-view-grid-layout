@@ -12,7 +12,7 @@ class PathCell: UICollectionViewCell {
 	@IBOutlet weak var textLabrel: UILabel!
 
 	static let Identifier: String = "PathCellReuseIdentifier"
-	
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

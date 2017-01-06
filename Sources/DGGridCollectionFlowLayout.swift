@@ -34,14 +34,12 @@ import UIKit
 	                                          heightForFooterInSection section: Int) -> CGFloat
 }
 
-
 fileprivate let kDefaultColumns: Int	= 1		// Default number of colmuns if the protocol is not implemented.
 fileprivate let kDefaultHeight: CGFloat	= 100	// Default row height if the protocol is not implemented.
 fileprivate let kDefaultSections: Int	= 1		// Default number of section, already handled by the super class.
 
 /**
-Struct helping to maintain the height of headers and footers
-to process offsets.
+Struct helping to maintain the attributes of headers and footers
 **/
 fileprivate struct SupplementaryViewsInfo {
 	var header: UICollectionViewLayoutAttributes?
@@ -189,20 +187,19 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 			let headerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForHeaderInSection: section) ?? 0
 			let footerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForFooterInSection: section) ?? 0
 
-			var headerSize: CGSize? = CGSize(width: (self.collectionView?.bounds.width ?? 0), height: headerHeight)
-			var footerSize: CGSize? = CGSize(width: (self.collectionView?.bounds.width ?? 0), height: footerHeight)
+			let headerSize: CGSize? = CGSize(width: (self.collectionView?.bounds.width ?? 0), height: headerHeight)
+			let footerSize: CGSize? = CGSize(width: (self.collectionView?.bounds.width ?? 0), height: footerHeight)
 
-			if var info = self.supplementaryViewsInfoInSection[section] {
+			if let info = self.supplementaryViewsInfoInSection[section] {
 				info.header?.size = headerSize ?? CGSize()
 				info.footer?.size = footerSize ?? CGSize()
 			}
 			else {
-				var headerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+				let headerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
 				                                                       with: IndexPath(item: 0, section: section))
 				headerAttributes.frame = CGRect(x: 0, y: 0, width: (headerSize?.width ?? 0), height: (headerSize?.height ?? 0))
 
-
-				var footerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+				let footerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
 				                                                        with: IndexPath(item: 0, section: section))
 
 				 footerAttributes.frame = CGRect(x: 0, y: 0, width: (footerSize?.width ?? 0), height: (footerSize?.height ?? 0))
@@ -255,7 +252,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 			let footerOrigin = CGPoint(x: 0, y: cumulatedHeight + linesHeights + insets + header)
 
-			if var info = self.supplementaryViewsInfoInSection[section] {
+			if let info = self.supplementaryViewsInfoInSection[section] {
 				info.header?.frame.origin = headerOrigin
 				info.footer?.frame.origin = footerOrigin
 
@@ -274,8 +271,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 				let x = self.getXAxisFor(item: item)
 				let y = self.getYAxisFor(line: line, in: section)
 
-
-				var attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+				let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
 				attributes.frame = CGRect(x: x,
 				                          y: y,
 				                          width: self.columnWidth,
