@@ -97,6 +97,13 @@ Gives the same width for each items depending on the value returned. Default is 
 @objc optional func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int
 ```
 
+## Limitations
+
+Current limitations are :
+- Performances issues when more than 3k items. (WIP)
+- Decoration View not handled
+- Scroll direction only vertical
+
 
 ## Built With
 
