@@ -4,29 +4,19 @@ Layout that allows you to display collection of data in grid.
 It can have the look of a TableView or a CollectionView.
 
 ## Getting Started
-<<<<<<< HEAD
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-=======
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
->>>>>>> 06488783dff15096758b1f83a41845c714516867
 Works with iOS 8+, tested on Xcode 8.2
 
 ### Installing
 
 To install the DGGridCollectionViewController using **cocoapods**
-<<<<<<< HEAD
 
 - Add an entry in your Podfile  
 
-=======
-1. Add an entry in your Podfile
->>>>>>> 06488783dff15096758b1f83a41845c714516867
 ```
 # Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
@@ -40,7 +30,6 @@ target 'YourTarget' do
 end
 ```
 
-<<<<<<< HEAD
 - Then install the dependency with the `pod install` command.
 
 ## Usage
@@ -115,13 +104,6 @@ Gives the same width for each items depending on the value returned. Default is 
 
 [Fastlane](https://fastlane.tools/)
 Fastlane is a tool for iOS, Mac, and Android developers to automate tedious tasks like generating screenshots, dealing with provisioning profiles, and releasing your application.
-=======
-2. Then install the dependency with the `pod install` command.
-
-## Built With
-* [Fastlane](https://fastlane.tools/)
-
->>>>>>> 06488783dff15096758b1f83a41845c714516867
 
 ## Contributing
 
