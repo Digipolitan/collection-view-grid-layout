@@ -10,25 +10,31 @@ import UIKit
 
 @objc public protocol DGGridLayoutDataSource: UICollectionViewDataSource {
 	/**
-	Gives the same width for each items
+	Gives the same width for each items depending on the value returned. Default is 1.
 	**/
 	@objc optional func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int
 }
 
 @objc public protocol DGGridLayoutDelegate: UICollectionViewDelegate {
 	/**
-	Gives the height of the cell items, they will all have the same height except
-	the loading cell.
+	Gives the height of an item at an IndexPath. The highest item in the row will set the 
+	height of the row. Default is 100.
 	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
 	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
 	                                          heightForItemAtIndexPath indexPath: IndexPath,
 	                                          columnWidth: CGFloat) -> CGFloat
-
+	/**
+	Gives the height of a ReusableView of Type Header. If no height is provided,
+	no header will be displayed.
+	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
 	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
 	                                          heightForHeaderInSection section: Int) -> CGFloat
-
+	/**
+	Gives the height of a ReusableView of Type Footer. If no height is provided,
+	no footer will be displayed.
+	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
 	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
 	                                          heightForFooterInSection section: Int) -> CGFloat
@@ -61,7 +67,7 @@ this making the line height equals to the highest item in the line.
 */
 open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	open var sectionInset: UIEdgeInsets = UIEdgeInsets()
-	open var interitemSpacing: CGFloat = 0
+	open var columnSpacing: CGFloat = 0
 	open var lineSpacing: CGFloat = 0
 
 	fileprivate var numberOfSections: Int = kDefaultSections
@@ -164,7 +170,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	fileprivate func setColumnsWidth() {
 		let containerWidth = self.collectionView!.bounds.width
 		let insetsWidth = (self.sectionInset.left + self.sectionInset.right)
-		let interItemWidth = self.interitemSpacing * CGFloat(self.numberOfColumns - 1)
+		let interItemWidth = self.columnSpacing * CGFloat(self.numberOfColumns - 1)
 
 		self.columnWidth = CGFloat(containerWidth - insetsWidth - interItemWidth) / CGFloat(self.numberOfColumns)
 	}
@@ -381,7 +387,7 @@ extension DGCollectionViewGridLayout {
 		else {
 			return self.getXAxisFor(item: item - 1)
 				+ self.columnWidth
-				+ self.interitemSpacing
+				+ self.columnSpacing
 		}
 	}
 }

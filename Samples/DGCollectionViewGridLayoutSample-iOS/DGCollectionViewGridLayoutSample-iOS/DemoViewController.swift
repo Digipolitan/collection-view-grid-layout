@@ -30,10 +30,12 @@ class DemoViewController: UIViewController {
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
 
-		self.collectionView.collectionViewLayout = DGCollectionViewGridLayout()
-		(self.collectionView.collectionViewLayout as? DGCollectionViewGridLayout)!.lineSpacing = 10
-		(self.collectionView.collectionViewLayout as? DGCollectionViewGridLayout)!.interitemSpacing = 10
-		(self.collectionView.collectionViewLayout as? DGCollectionViewGridLayout)!.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+		let layout =  DGCollectionViewGridLayout()
+		layout.lineSpacing = 10
+		layout.columnSpacing = 10
+		layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+
+		self.collectionView.collectionViewLayout = layout
 	}
 
 	override func didReceiveMemoryWarning() {
