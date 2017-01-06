@@ -1,0 +1,4 @@
+disabled_rules: # rule identifiers to exclude from running
+  - statement_position
+
+line_length: 150
