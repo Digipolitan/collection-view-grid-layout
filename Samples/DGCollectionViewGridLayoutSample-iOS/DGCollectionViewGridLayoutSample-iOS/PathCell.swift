@@ -42,12 +42,9 @@ class PathCell: UICollectionViewCell {
 	}
 
 	func estimatedHeight(estimatedWidth: CGFloat) -> CGFloat {
-//		self.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: estimatedWidth * 2, height: 1000)
-		self.widthConstraint.constant = estimatedWidth + 10
-		self.layoutIfNeeded()
 		self.collectionView.collectionViewLayout.invalidateLayout()
 		self.collectionView.layoutIfNeeded()
-		let contentSize = self.collectionView.contentSize
+		let contentSize = self.collectionView.collectionViewLayout.collectionViewContentSize
 		print("content: \(self.collectionView.frame.width)")
 		print("width: \(self.collectionView.frame.width)")
 		return contentSize.height + self.textLabrel.frame.height + 10
