@@ -1,9 +1,9 @@
 # DGCollectionViewGridLayout
 
-Layout that allows you to display collection of data in grid.
-It can have the look of a TableView or a CollectionView.
+Layout that allows you to display collection of data in grid without only **very few** lines of codes.
+It can have the look of a `UITableView` or a `UICollectionView`.
 
-![DGCollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/develop/Screenshots/grid-1.gif?raw=true "Example 1") 
+![DGCollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/develop/Screenshots/grid-1.gif?raw=true "Example 1")
 ![DGCollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/develop/Screenshots/grid-2.gif?raw=true "Example 2")
 
 ## Getting Started
