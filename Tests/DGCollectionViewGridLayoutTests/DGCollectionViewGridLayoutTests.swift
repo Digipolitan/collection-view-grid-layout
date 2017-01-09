@@ -11,8 +11,4 @@ class DGCollectionViewGridLayoutTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDescription() {
-        let t = TemplateClass()
-        XCTAssertEqual(t.description, "TemplateDescription")
-    }
 }
