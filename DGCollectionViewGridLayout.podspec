@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name = "DGCollectionViewGridLayout"
 s.version = "1.0.0"
-s.summary = "This is a summary."
+s.summary = "Layout that allows you to display collection of data in grid with only very few lines of codes"
 s.homepage = "https://github.com/Digipolitan/collection-view-grid-layout"
 s.authors = "Digipolitan"
 s.source = { :git => "https://github.com/Digipolitan/collection-view-grid-layout.git", :tag => "v#{s.version}" }
