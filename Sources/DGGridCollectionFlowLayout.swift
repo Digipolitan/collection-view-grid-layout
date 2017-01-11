@@ -130,12 +130,21 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 		let height = self.estimateContentHeight()
 
 		return CGSize(width: width, height: height)
+	}
 
+	// Get the content height by getting the height of each sections.
+	fileprivate func estimateContentHeight() -> CGFloat {
+		var height: CGFloat = 0
+		for section in 0...(self.numberOfSections - 1) {
+			height = height + self.getHeightOf(section: section)
+		}
+
+		return height
 	}
 
 	// #3
 	// After processed the layoutAttributes and the content size 
-	// The collection view will ask to its layout the element to draw in a given rect.
+	// The collection view will ask to its layout the element attributes to draw in a given rect.
 	open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
 		return self.getAttributesForElementIn(rect: rect)
 	}
@@ -147,16 +156,6 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	open override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 		let attributes = self.supplementaryViewsInfoInSection[indexPath.section]!
 		return elementKind == UICollectionElementKindSectionHeader ? attributes.header : attributes.footer
-	}
-
-	// Get the content height by getting the height of each sections.
-	fileprivate func estimateContentHeight() -> CGFloat {
-		var height: CGFloat = 0
-		for section in 0...(self.numberOfSections - 1) {
-			height = height + self.getHeightOf(section: section)
-		}
-
-		return height
 	}
 
 	fileprivate func setNumberOfSections() {
@@ -224,9 +223,11 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 			for line in 0...(lines - 1) {
 				var lineHeight: CGFloat = 0
-				let items = (line + 1) * self.numberOfColumns
-				for item in 0...(items - 1) {
-					let indexPath = IndexPath(item: item, section: section)
+				let start = max(0, line - 1) * self.numberOfColumns
+				let end = (line + 1) * self.numberOfColumns
+				for item in start...(end - 1) {
+//					print("item: \(item), line: \(line), section: \(section)")
+					let indexPath = IndexPath(item: ((line * self.numberOfColumns) + item), section: section)
 
 					let itemHeight = self.delegate?
 						.collectionView?(self.collectionView!, layout: self, heightForItemAtIndexPath: indexPath, columnWidth: self.columnWidth) ?? kDefaultHeight
