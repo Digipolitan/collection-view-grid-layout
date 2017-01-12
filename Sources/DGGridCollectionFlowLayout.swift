@@ -135,11 +135,16 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	// Get the content height by getting the height of each sections.
 	fileprivate func estimateContentHeight() -> CGFloat {
 		var height: CGFloat = 0
+
+		guard self.numberOfSections > 0 else {
+			return height
+		}
+		
 		for section in 0...(self.numberOfSections - 1) {
 			height = height + self.getHeightOf(section: section)
 		}
 
-		return height
+		return max(self.collectionView!.bounds.height, height)
 	}
 
 	// #3
@@ -160,6 +165,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 	fileprivate func setNumberOfSections() {
 		self.numberOfSections = self.dataSource?.numberOfSections?(in: self.collectionView!) ?? kDefaultSections
+		self.numberOfSections = max(self.numberOfSections, 0)
 	}
 
 	fileprivate func setNumberOfColumns() {
@@ -182,12 +188,20 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	}
 
 	fileprivate func setNumberOfItemsInSections() {
+		guard self.numberOfSections > 0 else {
+			return
+		}
+
 		for section in 0...(self.numberOfSections - 1) {
 			self.numberOfItemsInSection[section] = self.collectionView?.dataSource?.collectionView(self.collectionView!, numberOfItemsInSection: section) ?? 0
 		}
 	}
 
 	fileprivate func setSizeOfSupplementaryViewsInSections() {
+		guard self.numberOfSections > 0 else {
+			return
+		}
+
 		for section in 0...(self.numberOfSections - 1) {
 			let headerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForHeaderInSection: section) ?? 0
 			let footerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForFooterInSection: section) ?? 0
@@ -221,6 +235,10 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 			let section = element.key
 			let lines = Int(element.value)
 
+			guard lines > 0 else {
+				return
+			}
+
 			for line in 0...(lines - 1) {
 				var lineHeight: CGFloat = 0
 				let start = max(0, line - 1) * self.numberOfColumns
@@ -247,8 +265,11 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 	// Set the origin of each SupplementaryView (Header and Footer)
 	fileprivate func setPositionForSupplementaryViews() {
-		var cumulatedHeight: CGFloat = 0
+		guard self.numberOfSections > 0 else {
+			return
+		}
 
+		var cumulatedHeight: CGFloat = 0
 		for section in 0...(self.numberOfSections - 1) {
 			cumulatedHeight = cumulatedHeight + self.getHeightOf(section: section - 1)
 			let headerOrigin = CGPoint(x: 0, y: cumulatedHeight)
@@ -270,8 +291,17 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 	// Set the origin of each item
 	fileprivate func setInfoForItemsAtIndexPath() {
+		guard self.numberOfSections > 0 else {
+			return
+		}
+
 		for section in 0...(self.numberOfSections - 1) {
 			let items = self.numberOfItemsInSection[section]!
+
+			guard items > 0 else {
+				continue
+			}
+
 			for item in 0...(items - 1) {
 				let indexPath = IndexPath(item: item, section: section)
 				let line = self.getLineFrom(indexPath: indexPath)
@@ -336,7 +366,10 @@ extension DGCollectionViewGridLayout {
 	}
 
 	fileprivate func getHeightOfLinesIn(section: Int) -> CGFloat {
-		let lines = self.heightOfLinesInSection[section]!
+		guard let lines = self.heightOfLinesInSection[section] else {
+			return self.lineSpacing
+		}
+
 		let linesHeight = lines.reduce(0, { (subTotal, element) -> CGFloat in
 			return subTotal + element.value
 		})

@@ -16,7 +16,7 @@ Works with iOS 8+, tested on Xcode 8.2
 
 ### Installing
 
-To install the DGGridCollectionViewController using **cocoapods**
+To install the DGCollectionGridViewLayout using **cocoapods**
 
 - Add an entry in your Podfile  
 
@@ -123,4 +123,4 @@ unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.co
 
 ## License
 
-DGGridCollectionViewController is licensed under the [BSD 3-Clause license](LICENSE).
+DGCollectionGridViewLayout is licensed under the [BSD 3-Clause license](LICENSE).
