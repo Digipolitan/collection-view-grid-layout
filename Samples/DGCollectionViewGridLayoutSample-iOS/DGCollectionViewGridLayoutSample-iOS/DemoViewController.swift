@@ -45,11 +45,11 @@ class DemoViewController: UIViewController {
 }
 
 extension DemoViewController: DGGridLayoutDelegate {
-//	func collectionView(_ collectionView: UICollectionView,
-//	                    layout collectionViewLayout: DGCollectionViewGridLayout,
-//	                    heightForFooterInSection section: Int) -> CGFloat {
-//		return 40
-//	}
+	func collectionView(_ collectionView: UICollectionView,
+	                    layout collectionViewLayout: DGCollectionViewGridLayout,
+	                    heightForFooterInSection section: Int) -> CGFloat {
+		return 40
+	}
 
 	func collectionView(_ collectionView: UICollectionView,
 	                    layout collectionViewLayout: DGCollectionViewGridLayout,
@@ -69,11 +69,12 @@ extension DemoViewController: DGGridLayoutDelegate {
 
 extension DemoViewController: DGGridLayoutDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return 3
+		return 1
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 10
+		return 0
+
 	}
 
 //	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
