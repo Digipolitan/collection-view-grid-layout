@@ -51,7 +51,7 @@ fileprivate struct SupplementaryViewsInfo {
 	var header: UICollectionViewLayoutAttributes?
 	var footer: UICollectionViewLayoutAttributes?
 
-	init(_ header: UICollectionViewLayoutAttributes, _ footer: UICollectionViewLayoutAttributes) {
+	init(_ header: UICollectionViewLayoutAttributes?, _ footer: UICollectionViewLayoutAttributes?) {
 		self.header = header
 		self.footer = footer
 	}
@@ -106,6 +106,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	// Mandatory call to super.prepare() to let the CollectionViewFlowLayout do the initial work (sizing, positionning, etc..)
 	// All global calculation about sizing and positionning should be done here.
 	open override func prepare() {
+
 		super.prepare()
 
 		NotificationCenter.default.removeObserver(self)
@@ -206,25 +207,25 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 			let headerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForHeaderInSection: section) ?? 0
 			let footerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForFooterInSection: section) ?? 0
 
-			let headerSize: CGSize? = CGSize(width: (self.collectionView?.bounds.width ?? 0), height: headerHeight)
-			let footerSize: CGSize? = CGSize(width: (self.collectionView?.bounds.width ?? 0), height: footerHeight)
+			let headerSize: CGSize? = headerHeight > 0 ? CGSize(width: (self.collectionView?.bounds.width ?? 0), height: headerHeight) : nil
+			let footerSize: CGSize? = footerHeight > 0 ? CGSize(width: (self.collectionView?.bounds.width ?? 0), height: footerHeight) : nil
 
-			if let info = self.supplementaryViewsInfoInSection[section] {
-				info.header?.size = headerSize ?? CGSize()
-				info.footer?.size = footerSize ?? CGSize()
+			var headerAttributes: UICollectionViewLayoutAttributes?
+			var footerAttributes: UICollectionViewLayoutAttributes?
+
+			if headerSize != nil {
+				headerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+				                                                    with: IndexPath(item: 0, section: section))
+				headerAttributes?.frame = CGRect(x: 0, y: 0, width: (headerSize?.width ?? 0), height: (headerSize?.height ?? 0))
 			}
-			else {
-				let headerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
-				                                                       with: IndexPath(item: 0, section: section))
-				headerAttributes.frame = CGRect(x: 0, y: 0, width: (headerSize?.width ?? 0), height: (headerSize?.height ?? 0))
 
-				let footerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
-				                                                        with: IndexPath(item: 0, section: section))
-
-				 footerAttributes.frame = CGRect(x: 0, y: 0, width: (footerSize?.width ?? 0), height: (footerSize?.height ?? 0))
-
-				self.supplementaryViewsInfoInSection[section] = SupplementaryViewsInfo(headerAttributes, footerAttributes)
+			if footerSize != nil {
+				footerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+				                                                    with: IndexPath(item: 0, section: section))
+				footerAttributes?.frame = CGRect(x: 0, y: 0, width: (footerSize?.width ?? 0), height: (footerSize?.height ?? 0))
 			}
+
+			self.supplementaryViewsInfoInSection[section] = SupplementaryViewsInfo(headerAttributes, footerAttributes)
 		}
 	}
 
@@ -240,9 +241,11 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 			}
 
 			for line in 0...(lines - 1) {
+//				print("section: \(section)")
+//				print("line: \(line)")
 				var lineHeight: CGFloat = 0
 				let start = max(0, line - 1) * self.numberOfColumns
-				let end = (line + 1) * self.numberOfColumns
+				let end = max(1, line) * self.numberOfColumns
 				for item in start...(end - 1) {
 //					print("item: \(item), line: \(line), section: \(section)")
 					let indexPath = IndexPath(item: ((line * self.numberOfColumns) + item), section: section)
