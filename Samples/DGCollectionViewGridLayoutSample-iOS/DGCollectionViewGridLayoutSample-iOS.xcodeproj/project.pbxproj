@@ -13,12 +13,19 @@
 		A30D63FC1E0D717E00A3CE45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30D63FA1E0D717E00A3CE45 /* LaunchScreen.storyboard */; };
 		A30D640A1E0D71CB00A3CE45 /* DGCollectionViewGridLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30D64091E0D71CB00A3CE45 /* DGCollectionViewGridLayout.framework */; };
 		A30D640B1E0D71CB00A3CE45 /* DGCollectionViewGridLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A30D64091E0D71CB00A3CE45 /* DGCollectionViewGridLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AED443321E1F9CB900AD7D62 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4432C1E1F9CB900AD7D62 /* DemoViewController.swift */; };
-		AED443331E1F9CB900AD7D62 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED4432D1E1F9CB900AD7D62 /* DemoViewController.xib */; };
+		AE9E8E561E2D23AE00009A1E /* TableViewLookAlikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8E551E2D23AE00009A1E /* TableViewLookAlikeViewController.swift */; };
+		AE9E8E581E2D23C200009A1E /* LargeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8E571E2D23C200009A1E /* LargeCollectionViewController.swift */; };
+		AE9E8E5A1E2D23D400009A1E /* HeaderFooterGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8E591E2D23D400009A1E /* HeaderFooterGridViewController.swift */; };
+		AE9E8E5C1E2D23E300009A1E /* ClassicGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8E5B1E2D23E300009A1E /* ClassicGridViewController.swift */; };
+		AE9E8E5F1E2D2F3300009A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9E8E5E1E2D2F3300009A1E /* Main.storyboard */; };
+		AED443321E1F9CB900AD7D62 /* OriginalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4432C1E1F9CB900AD7D62 /* OriginalViewController.swift */; };
 		AED443341E1F9CB900AD7D62 /* PathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED4432E1E1F9CB900AD7D62 /* PathCell.swift */; };
 		AED443351E1F9CB900AD7D62 /* PathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED4432F1E1F9CB900AD7D62 /* PathCell.xib */; };
 		AED443361E1F9CB900AD7D62 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED443301E1F9CB900AD7D62 /* ReusableView.swift */; };
 		AED443371E1F9CB900AD7D62 /* ReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED443311E1F9CB900AD7D62 /* ReusableView.xib */; };
+		AEE3030B1E2E1850004A3BF7 /* SelfSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3030A1E2E1850004A3BF7 /* SelfSizingViewController.swift */; };
+		AEE3030F1E2E200F004A3BF7 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3030D1E2E200F004A3BF7 /* DescriptionCell.swift */; };
+		AEE303101E2E200F004A3BF7 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE3030E1E2E200F004A3BF7 /* DescriptionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,12 +55,19 @@
 		A30D63FB1E0D717E00A3CE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30D63FD1E0D717E00A3CE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30D64091E0D71CB00A3CE45 /* DGCollectionViewGridLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DGCollectionViewGridLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AED4432C1E1F9CB900AD7D62 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
-		AED4432D1E1F9CB900AD7D62 /* DemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
+		AE9E8E551E2D23AE00009A1E /* TableViewLookAlikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewLookAlikeViewController.swift; sourceTree = "<group>"; };
+		AE9E8E571E2D23C200009A1E /* LargeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeCollectionViewController.swift; sourceTree = "<group>"; };
+		AE9E8E591E2D23D400009A1E /* HeaderFooterGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderFooterGridViewController.swift; sourceTree = "<group>"; };
+		AE9E8E5B1E2D23E300009A1E /* ClassicGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassicGridViewController.swift; sourceTree = "<group>"; };
+		AE9E8E5E1E2D2F3300009A1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AED4432C1E1F9CB900AD7D62 /* OriginalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalViewController.swift; sourceTree = "<group>"; };
 		AED4432E1E1F9CB900AD7D62 /* PathCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathCell.swift; sourceTree = "<group>"; };
 		AED4432F1E1F9CB900AD7D62 /* PathCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathCell.xib; sourceTree = "<group>"; };
 		AED443301E1F9CB900AD7D62 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		AED443311E1F9CB900AD7D62 /* ReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableView.xib; sourceTree = "<group>"; };
+		AEE3030A1E2E1850004A3BF7 /* SelfSizingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizingViewController.swift; sourceTree = "<group>"; };
+		AEE3030D1E2E200F004A3BF7 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		AEE3030E1E2E200F004A3BF7 /* DescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +122,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AE9E8E501E2D22B500009A1E /* ClassicGrid */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E8E5B1E2D23E300009A1E /* ClassicGridViewController.swift */,
+			);
+			name = ClassicGrid;
+			sourceTree = "<group>";
+		};
+		AE9E8E511E2D22C000009A1E /* HeaderFooterGrid */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E8E591E2D23D400009A1E /* HeaderFooterGridViewController.swift */,
+			);
+			name = HeaderFooterGrid;
+			sourceTree = "<group>";
+		};
+		AE9E8E521E2D22CC00009A1E /* LargeCollection */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E8E571E2D23C200009A1E /* LargeCollectionViewController.swift */,
+			);
+			name = LargeCollection;
+			sourceTree = "<group>";
+		};
+		AE9E8E531E2D22D700009A1E /* TableViewLookAlike */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E8E551E2D23AE00009A1E /* TableViewLookAlikeViewController.swift */,
+			);
+			name = TableViewLookAlike;
+			sourceTree = "<group>";
+		};
+		AE9E8E5D1E2D2ECF00009A1E /* SelfSizingItems */ = {
+			isa = PBXGroup;
+			children = (
+				AEE3030C1E2E1FDA004A3BF7 /* Components */,
+				AEE3030A1E2E1850004A3BF7 /* SelfSizingViewController.swift */,
+			);
+			name = SelfSizingItems;
+			sourceTree = "<group>";
+		};
 		AED443381E1F9CC600AD7D62 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AED4432C1E1F9CB900AD7D62 /* DemoViewController.swift */,
-				AED4432D1E1F9CB900AD7D62 /* DemoViewController.xib */,
+				AE9E8E5D1E2D2ECF00009A1E /* SelfSizingItems */,
+				AE9E8E531E2D22D700009A1E /* TableViewLookAlike */,
+				AE9E8E521E2D22CC00009A1E /* LargeCollection */,
+				AE9E8E511E2D22C000009A1E /* HeaderFooterGrid */,
+				AE9E8E501E2D22B500009A1E /* ClassicGrid */,
+				AED4432C1E1F9CB900AD7D62 /* OriginalViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -132,10 +191,20 @@
 			isa = PBXGroup;
 			children = (
 				A30D63F81E0D717E00A3CE45 /* Assets.xcassets */,
+				AE9E8E5E1E2D2F3300009A1E /* Main.storyboard */,
 				A30D63FA1E0D717E00A3CE45 /* LaunchScreen.storyboard */,
 				A30D63FD1E0D717E00A3CE45 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		AEE3030C1E2E1FDA004A3BF7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AEE3030D1E2E200F004A3BF7 /* DescriptionCell.swift */,
+				AEE3030E1E2E200F004A3BF7 /* DescriptionCell.xib */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 		B8FF5AA30A09A2E69BAC9EB0 /* Pods */ = {
@@ -214,10 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED443351E1F9CB900AD7D62 /* PathCell.xib in Resources */,
+				AE9E8E5F1E2D2F3300009A1E /* Main.storyboard in Resources */,
 				AED443371E1F9CB900AD7D62 /* ReusableView.xib in Resources */,
 				A30D63FC1E0D717E00A3CE45 /* LaunchScreen.storyboard in Resources */,
+				AEE303101E2E200F004A3BF7 /* DescriptionCell.xib in Resources */,
 				A30D63F91E0D717E00A3CE45 /* Assets.xcassets in Resources */,
-				AED443331E1F9CB900AD7D62 /* DemoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED443321E1F9CB900AD7D62 /* DemoViewController.swift in Sources */,
+				AEE3030B1E2E1850004A3BF7 /* SelfSizingViewController.swift in Sources */,
+				AE9E8E581E2D23C200009A1E /* LargeCollectionViewController.swift in Sources */,
+				AE9E8E5C1E2D23E300009A1E /* ClassicGridViewController.swift in Sources */,
+				AE9E8E561E2D23AE00009A1E /* TableViewLookAlikeViewController.swift in Sources */,
+				AEE3030F1E2E200F004A3BF7 /* DescriptionCell.swift in Sources */,
+				AE9E8E5A1E2D23D400009A1E /* HeaderFooterGridViewController.swift in Sources */,
+				AED443321E1F9CB900AD7D62 /* OriginalViewController.swift in Sources */,
 				AED443361E1F9CB900AD7D62 /* ReusableView.swift in Sources */,
 				AED443341E1F9CB900AD7D62 /* PathCell.swift in Sources */,
 				A30D63F21E0D717E00A3CE45 /* AppDelegate.swift in Sources */,

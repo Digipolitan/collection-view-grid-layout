@@ -12,7 +12,12 @@ private let kReuseIdentifier = "ReuseIdentifier"
 
 class PathCell: UICollectionViewCell {
 	@IBOutlet private weak var textLabrel: UILabel!
-	@IBOutlet private weak var collectionView: UICollectionView!
+
+	override var bounds: CGRect {
+		didSet {
+			contentView.frame = bounds
+		}
+	}
 
 	fileprivate var indexPath: IndexPath?
 	fileprivate var numberOfSection: Int = 0
@@ -21,33 +26,16 @@ class PathCell: UICollectionViewCell {
 	@IBOutlet weak var widthConstraint: NSLayoutConstraint!
 	static let Identifier: String = "PathCellReuseIdentifier"
 
-	override func awakeFromNib() {
-		super.awakeFromNib()
-		self.collectionView.delegate = self
-		self.collectionView.dataSource = self
-
-		let layout: UICollectionViewFlowLayout = (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)!
-
-
-		self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kReuseIdentifier)
-	}
-
 	func set(indexPath: IndexPath) {
 		self.numberOfSection = indexPath.section
 		self.numberOfRow = indexPath.row
 		self.indexPath = indexPath
 
 		self.textLabrel.text = "[\(indexPath.section), \(indexPath.item)]"
-		self.collectionView.reloadData()
 	}
 
 	func estimatedHeight(estimatedWidth: CGFloat) -> CGFloat {
-		self.collectionView.collectionViewLayout.invalidateLayout()
-		self.collectionView.layoutIfNeeded()
-		let contentSize = self.collectionView.collectionViewLayout.collectionViewContentSize
-		print("content: \(self.collectionView.frame.width)")
-		print("width: \(self.collectionView.frame.width)")
-		return contentSize.height + self.textLabrel.frame.height + 10
+		return 100;
 	}
 }
 
