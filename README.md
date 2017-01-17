@@ -57,14 +57,14 @@ layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
 ### Interacting with the component
 
-To Communicate with the layout, use the same way than `UICollectionViewFlowLayout`. Declare your component as `DGGridLayoutDelegate` and `DGGridLayoutDataSource`, those inheriting respectively from `UICollectionViewDelegate` and `UICollectionViewDataSource` you just have to assign it to your `collectionView`.
+To Communicate with the layout, use the same way than `UICollectionViewFlowLayout`. Declare your component as `DGCollectionViewGridLayoutDelegate` and `DGCollectionViewGridLayoutDataSource`, those inheriting respectively from `UICollectionViewDelegate` and `UICollectionViewDataSource` you just have to assign it to your `collectionView`.
 
 ```swift
 self.collectionView.delegate = self
 self.collectionView.dataSource = self
 ```
 
-- DGGridLayoutDelegate
+- DGCollectionViewGridLayoutDelegate
 
 ```swift
 /**
@@ -73,7 +73,7 @@ height of the row. Default is 100.
 **/
 @objc optional func collectionView(_ collectionView: UICollectionView,
                                           layout collectionViewLayout: DGCollectionViewGridLayout,
-                                          heightForItemAtIndexPath indexPath: IndexPath,
+                                          heightForItemAt indexPath: IndexPath,
                                           columnWidth: CGFloat) -> CGFloat
 /**
 Gives the height of a ReusableView of Type Header. If no height is provided,
@@ -81,23 +81,23 @@ no header will be displayed.
 **/
 @objc optional func collectionView(_ collectionView: UICollectionView,
                                           layout collectionViewLayout: DGCollectionViewGridLayout,
-                                          heightForHeaderInSection section: Int) -> CGFloat
+                                          heightForHeaderIn section: Int) -> CGFloat
 /**
 Gives the height of a ReusableView of Type Footer. If no height is provided,
 no footer will be displayed.
 **/
 @objc optional func collectionView(_ collectionView: UICollectionView,
                                           layout collectionViewLayout: DGCollectionViewGridLayout,
-                                          heightForFooterInSection section: Int) -> CGFloat
+                                          heightForFooterIn section: Int) -> CGFloat
 ```
 
-- DGGridLayoutDataSource
+- DGCollectionViewGridLayoutDataSource
 
 ```swift
 /**
 Gives the same width for each items depending on the value returned. Default is 1.
 **/
-@objc optional func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int
+@objc optional func numberOfColumns(in collectionView: UICollectionView) -> Int
 ```
 
 ## Limitations
