@@ -10,5 +10,4 @@ class DGCollectionViewGridLayoutTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
 }

@@ -1,5 +1,5 @@
-#ifndef _DGFRAMEWORKTEMPLATE_H
-#define _DGFRAMEWORKTEMPLATE_H
+#ifndef _DGCOLLECTIONVIEWGRIDLAYOUT_H
+#define _DGCOLLECTIONVIEWGRIDLAYOUT_H
 
 #import <Foundation/Foundation.h>
 
@@ -9,4 +9,4 @@ FOUNDATION_EXPORT double DGCollectionViewGridLayoutVersionNumber;
 //! Project version string for DGCollectionViewGridLayout
 FOUNDATION_EXPORT const unsigned char DGCollectionViewGridLayoutVersionString[];
 
-#endif /* _DGFRAMEWORKTEMPLATE_H */
+#endif /* _DGCOLLECTIONVIEWGRIDLAYOUT_H */

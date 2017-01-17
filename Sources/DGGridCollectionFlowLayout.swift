@@ -123,7 +123,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 		self.setSizeOfSupplementaryViewsInSections()
 		self.setPositionForSupplementaryViews()
 		self.setInfoForItemsAtIndexPath()
-	}
+    }
 
 	// #2
 	// After proccessed the sizes and origins of each element contained by the CollectionView
@@ -238,31 +238,31 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	// the line height will be equal to the highest item in the line
 	fileprivate func setHeightForLinesInSections() {
 		self.numberOfLinesInSection.forEach { (element) in
-			let section = element.key
-			let lines = Int(element.value)
+                let section = element.key
+                let lines = Int(element.value)
 
-			guard let collectionView = self.collectionView,
-                lines > 0 else {
-				return
-			}
+                guard let collectionView = self.collectionView,
+                    lines > 0 else {
+                        return
+                }
 
-            var linesHeight = [Int: CGFloat]()
-            var lineHeight: CGFloat = 0
-			for line in 0...(lines - 1) {
-                lineHeight = 0
-				let start = max(0, line - 1) * self.numberOfColumns
-				let end = max(1, line) * self.numberOfColumns
-				for item in start...(end - 1) {
-					let indexPath = IndexPath(item: ((line * self.numberOfColumns) + item), section: section)
+                var linesHeight = [Int: CGFloat]()
+                var lineHeight: CGFloat = 0
+                for line in 0...(lines - 1) {
+                    lineHeight = 0
+                    let start = max(0, line - 1) * self.numberOfColumns
+                    let end = max(1, line) * self.numberOfColumns
+                    for item in start...(end - 1) {
+                        let indexPath = IndexPath(item: ((line * self.numberOfColumns) + item), section: section)
 
-					let itemHeight = self.delegate?
-						.collectionView?(collectionView, layout: self, heightForItemAt: indexPath, columnWidth: self.columnWidth) ?? Defaults.lineHeight
-
-					lineHeight = max(lineHeight, itemHeight)
-				}
-                linesHeight[line] = lineHeight
-			}
-            self.heightOfLinesInSection[section] = linesHeight
+                        let itemHeight = self.delegate?
+                            .collectionView?(collectionView, layout: self, heightForItemAt: indexPath, columnWidth: self.columnWidth) ?? Defaults.lineHeight
+                        
+                        lineHeight = max(lineHeight, itemHeight)
+                    }
+                    linesHeight[line] = lineHeight
+                }
+                self.heightOfLinesInSection[section] = linesHeight
 		}
 	}
 
