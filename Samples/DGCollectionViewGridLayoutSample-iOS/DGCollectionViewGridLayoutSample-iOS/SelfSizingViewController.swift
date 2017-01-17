@@ -43,16 +43,15 @@ class SelfSizingViewController: OriginalViewController {
 	}
 }
 
-extension SelfSizingViewController: DGGridLayoutDelegate {
+extension SelfSizingViewController: DGCollectionViewGridLayoutDelegate {
 	func collectionView(_ collectionView: UICollectionView,
 	                    layout collectionViewLayout: DGCollectionViewGridLayout,
-	                    heightForItemAtIndexPath indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
+	                    heightForItemAt indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
 		return 150
-		// TODO
 	}
 }
 
-extension SelfSizingViewController: DGGridLayoutDataSource {
+extension SelfSizingViewController: DGCollectionViewGridLayoutDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 3
 	}
@@ -62,7 +61,7 @@ extension SelfSizingViewController: DGGridLayoutDataSource {
 
 	}
 
-	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
+	func numberOfColumns(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
 

@@ -10,15 +10,10 @@ import UIKit
 import DGCollectionViewGridLayout
 
 class HeaderFooterGridViewController: OriginalViewController {
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view.
-		self.configureLayout()
-	}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+    override func viewDidLoad() {
+		super.viewDidLoad()
+		self.configureLayout()
 	}
 
 	func configureLayout() {
@@ -33,23 +28,23 @@ class HeaderFooterGridViewController: OriginalViewController {
 	}
 }
 
-extension HeaderFooterGridViewController: DGGridLayoutDelegate {
+extension HeaderFooterGridViewController: DGCollectionViewGridLayoutDelegate {
 	func collectionView(_ collectionView: UICollectionView,
 	                    layout collectionViewLayout: DGCollectionViewGridLayout,
-	                    heightForItemAtIndexPath indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
+	                    heightForItemAt indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
 		return 80
 	}
 
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: DGCollectionViewGridLayout, heightForHeaderInSection section: Int) -> CGFloat {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: DGCollectionViewGridLayout, heightForHeaderIn section: Int) -> CGFloat {
 		return 42
 	}
 
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: DGCollectionViewGridLayout, heightForFooterInSection section: Int) -> CGFloat {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: DGCollectionViewGridLayout, heightForFooterIn section: Int) -> CGFloat {
 		return 42
 	}
 }
 
-extension HeaderFooterGridViewController: DGGridLayoutDataSource {
+extension HeaderFooterGridViewController: DGCollectionViewGridLayoutDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 3
 	}
@@ -59,7 +54,7 @@ extension HeaderFooterGridViewController: DGGridLayoutDataSource {
 
 	}
 
-	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
+	func numberOfColumns(in collectionView: UICollectionView) -> Int {
 		return 3
 	}
 

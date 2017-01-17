@@ -34,29 +34,29 @@ class LargeCollectionViewController: OriginalViewController {
 	}
 }
 
-extension LargeCollectionViewController: DGGridLayoutDelegate {
+extension LargeCollectionViewController: DGCollectionViewGridLayoutDelegate {
 	func collectionView(_ collectionView: UICollectionView,
 	                    layout collectionViewLayout: DGCollectionViewGridLayout,
-	                    heightForItemAtIndexPath indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
+	                    heightForItemAt indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
 		return 80
 	}
 
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: DGCollectionViewGridLayout, heightForHeaderInSection section: Int) -> CGFloat {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: DGCollectionViewGridLayout, heightForHeaderIn section: Int) -> CGFloat {
 		return 42
 	}
 }
 
-extension LargeCollectionViewController: DGGridLayoutDataSource {
+extension LargeCollectionViewController: DGCollectionViewGridLayoutDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 5
 	}
 
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
 		return 2000
 
 	}
 
-	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
+	func numberOfColumns(in collectionView: UICollectionView) -> Int {
 		return 3
 	}
 
@@ -78,7 +78,7 @@ extension LargeCollectionViewController: DGGridLayoutDataSource {
 
 		fatalError("Error during dequeue")
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		print("did selected item at: \(indexPath)")
 	}

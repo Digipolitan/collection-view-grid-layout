@@ -473,6 +473,7 @@
 			baseConfigurationReference = 444C2E3A94BE72ECE95421F5 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = "DGCollectionViewGridLayoutSample-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -488,6 +489,7 @@
 			baseConfigurationReference = 437CB24F88DE489FD8141488 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = "DGCollectionViewGridLayoutSample-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

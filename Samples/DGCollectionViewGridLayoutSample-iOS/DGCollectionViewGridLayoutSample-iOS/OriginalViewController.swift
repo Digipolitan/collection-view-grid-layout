@@ -26,9 +26,4 @@ class OriginalViewController: UIViewController {
 		                             forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
 		                             withReuseIdentifier: ReusableView.Identifier)
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
 }

@@ -35,7 +35,7 @@ class PathCell: UICollectionViewCell {
 	}
 
 	func estimatedHeight(estimatedWidth: CGFloat) -> CGFloat {
-		return 100;
+		return 100
 	}
 }
 

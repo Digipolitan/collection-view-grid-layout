@@ -33,15 +33,15 @@ class ClassicGridViewController: OriginalViewController {
 	}
 }
 
-extension ClassicGridViewController: DGGridLayoutDelegate {
+extension ClassicGridViewController: DGCollectionViewGridLayoutDelegate {
 	func collectionView(_ collectionView: UICollectionView,
 	                    layout collectionViewLayout: DGCollectionViewGridLayout,
-	                    heightForItemAtIndexPath indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
+	                    heightForItemAt indexPath: IndexPath, columnWidth: CGFloat) -> CGFloat {
 		return 80
 	}
 }
 
-extension ClassicGridViewController: DGGridLayoutDataSource {
+extension ClassicGridViewController: DGCollectionViewGridLayoutDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 3
 	}
@@ -51,7 +51,7 @@ extension ClassicGridViewController: DGGridLayoutDataSource {
 
 	}
 
-	func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int {
+	func numberOfColumns(in collectionView: UICollectionView) -> Int {
 		return 3
 	}
 

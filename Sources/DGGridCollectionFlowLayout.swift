@@ -8,21 +8,21 @@
 
 import UIKit
 
-@objc public protocol DGGridLayoutDataSource: UICollectionViewDataSource {
+@objc public protocol DGCollectionViewGridLayoutDataSource: UICollectionViewDataSource {
 	/**
 	Gives the same width for each items depending on the value returned. Default is 1.
 	**/
-	@objc optional func numberOfColumnsIn(_ collectionView: UICollectionView) -> Int
+	@objc optional func numberOfColumns(in collectionView: UICollectionView) -> Int
 }
 
-@objc public protocol DGGridLayoutDelegate: UICollectionViewDelegate {
+@objc public protocol DGCollectionViewGridLayoutDelegate: UICollectionViewDelegate {
 	/**
 	Gives the height of an item at an IndexPath. The highest item in the row will set the 
 	height of the row. Default is 100.
 	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
 	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-	                                          heightForItemAtIndexPath indexPath: IndexPath,
+	                                          heightForItemAt indexPath: IndexPath,
 	                                          columnWidth: CGFloat) -> CGFloat
 	/**
 	Gives the height of a ReusableView of Type Header. If no height is provided,
@@ -30,19 +30,15 @@ import UIKit
 	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
 	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-	                                          heightForHeaderInSection section: Int) -> CGFloat
+	                                          heightForHeaderIn section: Int) -> CGFloat
 	/**
 	Gives the height of a ReusableView of Type Footer. If no height is provided,
 	no footer will be displayed.
 	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
 	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-	                                          heightForFooterInSection section: Int) -> CGFloat
+	                                          heightForFooterIn section: Int) -> CGFloat
 }
-
-fileprivate let kDefaultColumns: Int	= 1		// Default number of colmuns if the protocol is not implemented.
-fileprivate let kDefaultHeight: CGFloat	= 100	// Default row height if the protocol is not implemented.
-fileprivate let kDefaultSections: Int	= 1		// Default number of section, already handled by the super class.
 
 /**
 Struct helping to maintain the attributes of headers and footers
@@ -66,13 +62,19 @@ Also, notice that for each line, the delegate will ask the height of each items,
 this making the line height equals to the highest item in the line.
 */
 open class DGCollectionViewGridLayout: UICollectionViewLayout {
+
+    public struct Defaults {
+        public static let numberOfColumns: Int = 1 // Default number of colmuns if the protocol is not implemented.
+        public static let lineHeight: CGFloat = 100 // Default row height if the protocol is not implemented.
+        public static let numberOfSections: Int = 1 // Default number of section, already handled by the super class.
+    }
+
 	open var sectionInset: UIEdgeInsets = UIEdgeInsets()
 	open var columnSpacing: CGFloat = 0
 	open var lineSpacing: CGFloat = 0
-
-	fileprivate var numberOfSections: Int = kDefaultSections
+	fileprivate var numberOfSections: Int = Defaults.numberOfSections
 	fileprivate var numberOfItemsInSection: [Int: Int]	= [Int: Int]()
-	fileprivate var numberOfColumns: Int = kDefaultColumns
+	fileprivate var numberOfColumns: Int = Defaults.numberOfColumns
 	fileprivate var numberOfLines: Int = 0
 	fileprivate var numberOfLinesInSection: [Int: Int] = [Int: Int]()
 	fileprivate var columnWidth: CGFloat = 0
@@ -94,12 +96,12 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 		}
 	}
 
-	fileprivate weak var delegate: DGGridLayoutDelegate? {
-		return self.collectionView?.delegate as? DGGridLayoutDelegate
+	fileprivate weak var delegate: DGCollectionViewGridLayoutDelegate? {
+		return self.collectionView?.delegate as? DGCollectionViewGridLayoutDelegate
 	}
 
-	fileprivate weak var dataSource: DGGridLayoutDataSource? {
-		return self.collectionView?.dataSource as? DGGridLayoutDataSource
+	fileprivate weak var dataSource: DGCollectionViewGridLayoutDataSource? {
+		return self.collectionView?.dataSource as? DGCollectionViewGridLayoutDataSource
 	}
 
 	// #1
@@ -127,7 +129,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	// After proccessed the sizes and origins of each element contained by the CollectionView
 	// we process the content size to make the content scrollable.
 	open override var collectionViewContentSize: CGSize {
-		let width = self.collectionView!.bounds.width
+		let width = self.collectionView?.bounds.width ?? 0
 		let height = self.estimateContentHeight()
 
 		return CGSize(width: width, height: height)
@@ -135,24 +137,24 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 	// Get the content height by getting the height of each sections.
 	fileprivate func estimateContentHeight() -> CGFloat {
-		var height: CGFloat = 0
-
 		guard self.numberOfSections > 0 else {
-			return height
-		}
-		
-		for section in 0...(self.numberOfSections - 1) {
-			height = height + self.getHeightOf(section: section)
+			return 0
 		}
 
-		return max(self.collectionView!.bounds.height, height)
+        var height: CGFloat = 0
+		for section in 0...(self.numberOfSections - 1) {
+			height = height + self.height(forSection: section)
+		}
+        let collectionViewHeight = self.collectionView?.bounds.height ?? 0
+
+		return max(collectionViewHeight, height)
 	}
 
 	// #3
 	// After processed the layoutAttributes and the content size 
 	// The collection view will ask to its layout the element attributes to draw in a given rect.
 	open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-		return self.getAttributesForElementIn(rect: rect)
+		return self.attributesForElements(in: rect)
 	}
 
 	open override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
@@ -160,25 +162,28 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	}
 
 	open override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-		let attributes = self.supplementaryViewsInfoInSection[indexPath.section]!
+        guard let attributes = self.supplementaryViewsInfoInSection[indexPath.section] else {
+            return nil
+        }
 		return elementKind == UICollectionElementKindSectionHeader ? attributes.header : attributes.footer
 	}
 
 	fileprivate func setNumberOfSections() {
-		self.numberOfSections = self.dataSource?.numberOfSections?(in: self.collectionView!) ?? kDefaultSections
+		self.numberOfSections = self.dataSource?.numberOfSections?(in: self.collectionView!) ?? Defaults.numberOfSections
 		self.numberOfSections = max(self.numberOfSections, 0)
 	}
 
 	fileprivate func setNumberOfColumns() {
-		self.numberOfColumns = self.dataSource?.numberOfColumnsIn?(self.collectionView!) ?? kDefaultColumns
+        self.numberOfColumns = self.dataSource?.numberOfColumns?(in: self.collectionView!) ?? Defaults.numberOfColumns
 	}
 
 	fileprivate func setColumnsWidth() {
-		let containerWidth = self.collectionView!.bounds.width
+		let containerWidth = self.collectionView?.bounds.width ?? 0
 		let insetsWidth = (self.sectionInset.left + self.sectionInset.right)
 		let interItemWidth = self.columnSpacing * CGFloat(self.numberOfColumns - 1)
 
-		self.columnWidth = CGFloat(containerWidth - insetsWidth - interItemWidth) / CGFloat(self.numberOfColumns)
+		let columnWidth = CGFloat(containerWidth - insetsWidth - interItemWidth) / CGFloat(self.numberOfColumns)
+        self.columnWidth = max(columnWidth, 0)
 	}
 
 	fileprivate func setNumberOfLines() {
@@ -189,26 +194,26 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 	}
 
 	fileprivate func setNumberOfItemsInSections() {
-		guard self.numberOfSections > 0 else {
+		guard let collectionView = self.collectionView, self.numberOfSections > 0 else {
 			return
 		}
 
 		for section in 0...(self.numberOfSections - 1) {
-			self.numberOfItemsInSection[section] = self.collectionView?.dataSource?.collectionView(self.collectionView!, numberOfItemsInSection: section) ?? 0
+			self.numberOfItemsInSection[section] = collectionView.dataSource?.collectionView(collectionView, numberOfItemsInSection: section) ?? 0
 		}
 	}
 
 	fileprivate func setSizeOfSupplementaryViewsInSections() {
-		guard self.numberOfSections > 0 else {
+		guard let collectionView = self.collectionView, self.numberOfSections > 0 else {
 			return
 		}
 
 		for section in 0...(self.numberOfSections - 1) {
-			let headerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForHeaderInSection: section) ?? 0
-			let footerHeight = self.delegate?.collectionView?(self.collectionView!, layout: self, heightForFooterInSection: section) ?? 0
+			let headerHeight = self.delegate?.collectionView?(collectionView, layout: self, heightForHeaderIn: section) ?? 0
+			let footerHeight = self.delegate?.collectionView?(collectionView, layout: self, heightForFooterIn: section) ?? 0
 
-			let headerSize: CGSize? = headerHeight > 0 ? CGSize(width: (self.collectionView?.bounds.width ?? 0), height: headerHeight) : nil
-			let footerSize: CGSize? = footerHeight > 0 ? CGSize(width: (self.collectionView?.bounds.width ?? 0), height: footerHeight) : nil
+			let headerSize: CGSize? = headerHeight > 0 ? CGSize(width: collectionView.bounds.width, height: headerHeight) : nil
+			let footerSize: CGSize? = footerHeight > 0 ? CGSize(width: collectionView.bounds.width, height: footerHeight) : nil
 
 			var headerAttributes: UICollectionViewLayoutAttributes?
 			var footerAttributes: UICollectionViewLayoutAttributes?
@@ -236,33 +241,28 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 			let section = element.key
 			let lines = Int(element.value)
 
-			guard lines > 0 else {
+			guard let collectionView = self.collectionView,
+                lines > 0 else {
 				return
 			}
 
+            var linesHeight = [Int: CGFloat]()
+            var lineHeight: CGFloat = 0
 			for line in 0...(lines - 1) {
-//				print("section: \(section)")
-//				print("line: \(line)")
-				var lineHeight: CGFloat = 0
+                lineHeight = 0
 				let start = max(0, line - 1) * self.numberOfColumns
 				let end = max(1, line) * self.numberOfColumns
 				for item in start...(end - 1) {
-//					print("item: \(item), line: \(line), section: \(section)")
 					let indexPath = IndexPath(item: ((line * self.numberOfColumns) + item), section: section)
 
 					let itemHeight = self.delegate?
-						.collectionView?(self.collectionView!, layout: self, heightForItemAtIndexPath: indexPath, columnWidth: self.columnWidth) ?? kDefaultHeight
+						.collectionView?(collectionView, layout: self, heightForItemAt: indexPath, columnWidth: self.columnWidth) ?? Defaults.lineHeight
 
 					lineHeight = max(lineHeight, itemHeight)
 				}
-				if var linesHeight = self.heightOfLinesInSection[section] {
-					linesHeight[line] = lineHeight
-					self.heightOfLinesInSection[section] = linesHeight
-				}
-				else {
-					self.heightOfLinesInSection[section] = [line: lineHeight]
-				}
+                linesHeight[line] = lineHeight
 			}
+            self.heightOfLinesInSection[section] = linesHeight
 		}
 	}
 
@@ -274,14 +274,14 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 		var cumulatedHeight: CGFloat = 0
 		for section in 0...(self.numberOfSections - 1) {
-			cumulatedHeight = cumulatedHeight + self.getHeightOf(section: section - 1)
+			cumulatedHeight = cumulatedHeight + self.height(forSection: section - 1)
 			let headerOrigin = CGPoint(x: 0, y: cumulatedHeight)
 
-			let linesHeights = self.getHeightOfLinesIn(section: section)
+			let linesHeight = self.heightOfLines(in: section)
 			let insets = self.sectionInset.top + self.sectionInset.bottom
-			let header = (self.supplementaryViewsInfoInSection[section]?.header?.size.height ?? 0)
+			let header = self.supplementaryViewsInfoInSection[section]?.header?.size.height ?? 0
 
-			let footerOrigin = CGPoint(x: 0, y: cumulatedHeight + linesHeights + insets + header)
+			let footerOrigin = CGPoint(x: 0, y: cumulatedHeight + linesHeight + insets + header)
 
 			if let info = self.supplementaryViewsInfoInSection[section] {
 				info.header?.frame.origin = headerOrigin
@@ -299,23 +299,23 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 		}
 
 		for section in 0...(self.numberOfSections - 1) {
-			let items = self.numberOfItemsInSection[section]!
 
-			guard items > 0 else {
+			guard let items = self.numberOfItemsInSection[section],
+                items > 0 else {
 				continue
 			}
 
 			for item in 0...(items - 1) {
 				let indexPath = IndexPath(item: item, section: section)
-				let line = self.getLineFrom(indexPath: indexPath)
-				let x = self.getXAxisFor(item: item)
-				let y = self.getYAxisFor(line: line, in: section)
+				let lineIndex = self.lineIndex(from: indexPath)
+				let x = self.xAxis(for: item)
+				let y = self.yAxis(for: lineIndex, in: section)
 
 				let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
 				attributes.frame = CGRect(x: x,
 				                          y: y,
 				                          width: self.columnWidth,
-				                          height: self.heightOfLinesInSection[section]![line]!)
+				                          height: self.heightOfLinesInSection[section]?[lineIndex] ?? Defaults.lineHeight)
 				self.itemsInfoAtIndexPath[indexPath] = attributes
 			}
 		}
@@ -324,7 +324,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 // Utility functions
 extension DGCollectionViewGridLayout {
-	fileprivate func getAttributesForElementIn(rect: CGRect) -> [UICollectionViewLayoutAttributes] {
+	fileprivate func attributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes] {
 		var attributesCollection: [UICollectionViewLayoutAttributes] = []
 
 		let itemAttributes = self.itemsInfoAtIndexPath.flatMap { (element) -> UICollectionViewLayoutAttributes? in
@@ -348,13 +348,13 @@ extension DGCollectionViewGridLayout {
 		return attributesCollection
 	}
 
-	fileprivate func getTotalOffsetFromSupplementaryViewsAtSection(section: Int) -> CGFloat {
-		var offset: CGFloat = 0
+	fileprivate func totalOffsetFromSupplementaryViews(at section: Int) -> CGFloat {
 
 		guard section > 0 else {
 			return self.supplementaryViewsInfoInSection[0]?.header?.size.height ?? 0
 		}
 
+        var offset: CGFloat = 0
 		for index in 0...(section - 1) {
 			let suppOffset = self.supplementaryViewsInfoInSection[index]
 			offset = offset + (suppOffset?.header?.size.height ?? 0) + (suppOffset?.footer?.size.height ?? 0)
@@ -363,12 +363,11 @@ extension DGCollectionViewGridLayout {
 		return offset
 	}
 
-	fileprivate func getLineFrom(indexPath: IndexPath) -> Int {
-		let line = indexPath.row / self.numberOfColumns
-		return line
+	fileprivate func lineIndex(from indexPath: IndexPath) -> Int {
+		return indexPath.row / self.numberOfColumns
 	}
 
-	fileprivate func getHeightOfLinesIn(section: Int) -> CGFloat {
+	fileprivate func heightOfLines(in section: Int) -> CGFloat {
 		guard let lines = self.heightOfLinesInSection[section] else {
 			return self.lineSpacing
 		}
@@ -382,24 +381,24 @@ extension DGCollectionViewGridLayout {
 		return linesHeight + lineSpacing
 	}
 
-	fileprivate func getHeightOf(section: Int) -> CGFloat {
+	fileprivate func height(forSection section: Int) -> CGFloat {
 		guard section >= 0 else {
 			return 0
 		}
 
 		let offset = self.supplementaryViewsInfoInSection[section]
 		let insets = self.sectionInset.top + self.sectionInset.bottom
-		return self.getHeightOfLinesIn(section: section)
+		return self.heightOfLines(in: section)
 			+ (offset?.header?.size.height ?? 0)
 			+ (offset?.footer?.size.height ?? 0)
 			+ insets
 	}
 
-	fileprivate func getYAxisFor(line: Int, `in` section: Int) -> CGFloat {
+	fileprivate func yAxis(for line: Int, in section: Int) -> CGFloat {
 		var offset: CGFloat = 0
 
 		for index in 0...section {
-			offset = offset + self.getHeightOf(section: index - 1)
+			offset = offset + self.height(forSection: index - 1)
 		}
 
 		offset = offset
@@ -417,12 +416,11 @@ extension DGCollectionViewGridLayout {
 		return offset
 	}
 
-	fileprivate func getXAxisFor(item: Int) -> CGFloat {
+	fileprivate func xAxis(for item: Int) -> CGFloat {
 		if item % self.numberOfColumns == 0 {
 			return self.sectionInset.left
-		}
-		else {
-			return self.getXAxisFor(item: item - 1)
+		} else {
+			return self.xAxis(for: item - 1)
 				+ self.columnWidth
 				+ self.columnSpacing
 		}

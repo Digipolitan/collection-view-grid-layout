@@ -21,24 +21,21 @@ class DescriptionCell: UICollectionViewCell {
 	@IBOutlet private weak var descriptionTextView: UITextView!
 
 	static let Identifier = "DescriptionCellReuseIdentifier"
-	
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
 	func set(indexPath: IndexPath) {
 		if indexPath.row % 2 == 0 {
 			self.titleLabel.text = "short_text"
 			self.descriptionTextView.text = shortText
-		}
-		else {
+		} else {
 			self.titleLabel.text = "long_text"
 			self.descriptionTextView.text = longText
 		}
 	}
 
-	func processedHeight() -> CGFloat{
-		return self.descriptionTextView.contentSize.height + self.descriptionTextView.contentInset.top + self.descriptionTextView.contentInset.bottom + self.titleLabel.bounds.height
+	func processedHeight() -> CGFloat {
+		return self.descriptionTextView.contentSize.height
+            + self.descriptionTextView.contentInset.top
+            + self.descriptionTextView.contentInset.bottom
+            + self.titleLabel.bounds.height
 	}
 }
