@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [1.0.2](https://github.com/Digipolitan/collection-view-grid-layout/releases/tag/v1.0.2)
+## [1.0.3](https://github.com/Digipolitan/collection-view-grid-layout-swift/releases/tag/v1.0.3)
+
+patch tvOS
+
+---
+
+## [1.0.2](https://github.com/Digipolitan/collection-view-grid-layout-swift/releases/tag/v1.0.2)
 
 updated readme
 update info files
