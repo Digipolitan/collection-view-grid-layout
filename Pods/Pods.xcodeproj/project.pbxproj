@@ -7,52 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		227E9EE3197E540F2805323094CC6A5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		43B0A7A690486744DBBF64FFC362D20F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		698BA0DD98E5A611A808D60F482CDA06 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A6175994E0E694547BD7F471A95C2A /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m */; };
-		801F80526F8418C2C105CAE1340AE8F7 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8015E81CFF21A879402D5A1C8B146403 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A6CBE7CD559B42885FE1BEE0EE7A5F92 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2973A0043ADC0B8BD6025D0A4DAF43 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m */; };
-		AB89C0256CE3EE4ABD0AD9477908EF3F /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9313BBC56993D3F2541570EBFCF0F5 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1D22EC0A9313F1C6469FE2820988562 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 760DE155EEE0D70C1BFE2F5536D893ED /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B97E572E432254EE313DF79EBE797654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		CF7C01269E0B8551C597478B137EA75C /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C59665FAF2F23CD87B4E295FE2493DE /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m */; };
+		02AB94DD4792E27C1671EA10EB8D8519 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 513269D90C45A695FAEC49F239D8384E /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-dummy.m */; };
+		0909E47D2A3D8881E2C3C583A6333173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		113FEE154A369F0BB05A806A03F89A78 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DDB9FCD0C2E20714A9B644A212D3EE /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-dummy.m */; };
+		227E9EE3197E540F2805323094CC6A5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		3B4990E2A33FF41E6D9A1C2455B69BE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		3C5F32939DB43E7F961DEA68D4E7432B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		43B0A7A690486744DBBF64FFC362D20F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		554AC159E3C37D82516C25F9C118D3D8 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DD7949A283303DCD735A2593DC6208 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		698BA0DD98E5A611A808D60F482CDA06 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE313A9DA25ED98D52B25F7C4938C7F4 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m */; };
+		801F80526F8418C2C105CAE1340AE8F7 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F479C5DD3CF849C8C2CDDA2600A655BD /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6CBE7CD559B42885FE1BEE0EE7A5F92 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9561C2A293AAAAF6395B6ECD1AC3A9B /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m */; };
+		AB89C0256CE3EE4ABD0AD9477908EF3F /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5FEC6A828BC5085C6B1ADF1E6C0644 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1D22EC0A9313F1C6469FE2820988562 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBA01FC233618E661F30A4DF23E8EE8 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B97E572E432254EE313DF79EBE797654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		BA9CA3183D6571E6C9FA450F4AD72D88 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BB5FF83CE53B4FE0D5E8C90C4AB1F36 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF7C01269E0B8551C597478B137EA75C /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A18F560B00923657E6D3D7677502A83E /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m */; };
+		DCADE7D15E97559773E07443D7E8FB26 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E711514362DC6FAEBEEE5A9106F49261 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F284C034BF2519BCAB9C00E2BDC12B98 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84068F96CD0749C6A6E0FCB6CD4C6160 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0069CB4C3C2445EEDB9BE54B177194B3 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		1D87B8A45EA904AF2AB4E1910C5F0138 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2254082BDEC0614FAB9A1D3B566EF9C5 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap"; sourceTree = "<group>"; };
-		2385CF047C93C874225A17CB563CB278 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		293D82A4F8B71858188D63D82D0931B6 /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29938C4B11F0293FA071D464311EF2BD /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap"; sourceTree = "<group>"; };
-		2B087A0FA609B7A10ED1403C96E55EA7 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		2B435DC38F5AD61C6EF5E1BBF4610BF7 /* Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C59665FAF2F23CD87B4E295FE2493DE /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m"; sourceTree = "<group>"; };
-		325A4DFC3080BC375F46A82586E44BB2 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-resources.sh"; sourceTree = "<group>"; };
-		3B2973A0043ADC0B8BD6025D0A4DAF43 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m"; sourceTree = "<group>"; };
-		46F70850B2A0BF9BC69704700FCAFEFE /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		489CAC275AD8BBCD8C516E04A2FADE44 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4DDC8C64ADEFB112E824CDA5B723FA0C /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		760DE155EEE0D70C1BFE2F5536D893ED /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h"; sourceTree = "<group>"; };
-		7B487D154F813F5E086EDDB55057A844 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-resources.sh"; sourceTree = "<group>"; };
-		8015E81CFF21A879402D5A1C8B146403 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h"; sourceTree = "<group>"; };
-		88B8AE5AFE33CACA0E9909BC9FB87ADF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B0F43EA9ACF06C2537E2EC40B49F90A /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8EC741A98D5323BF6136FC9F1C9CDC9B /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		922605A17F5935334B96FA13195E16A5 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		0BCF16A6D99427B27414ADBA3066C1CF /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		0CC35C12DD9EC9A3FD4D363409D09465 /* Pods_Frameworks_DGCollectionViewGridLayout_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGCollectionViewGridLayout_tvOS.framework; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D19DE4901B86CBE07BBBA28D64E6D50 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-resources.sh"; sourceTree = "<group>"; };
+		0E669C3064382413C4AF498B0EF86E9E /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		138CB898FFB70425F73EFF3D06F3D241 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1439F40BA36B884DFCD033279DF16CDD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CF5D04E844E353A1B7F93E676FBCD39 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap"; sourceTree = "<group>"; };
+		28DDB9FCD0C2E20714A9B644A212D3EE /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS-dummy.m"; sourceTree = "<group>"; };
+		2D5FEC6A828BC5085C6B1ADF1E6C0644 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h"; sourceTree = "<group>"; };
+		2DF43F6E00C88351B4E0E2E86A544A0B /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		2E40420E7CD44EC55B12B4F3F8AE42E9 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		330D70BA7AD66622B8F757D8586BE5CF /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-resources.sh"; sourceTree = "<group>"; };
+		3DA1ED98E154EADA170659F9E6272038 /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AFEA80AF86AD91F3726559097A648F /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-resources.sh"; sourceTree = "<group>"; };
+		41CAA830DCC15115A06E6B8E57C2AA60 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1AFFA06C7A7AF96DDB1D7E715AB9EB /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		513269D90C45A695FAEC49F239D8384E /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-dummy.m"; sourceTree = "<group>"; };
+		5591EC48CE332C4BC1EF1D2624D45715 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.modulemap"; sourceTree = "<group>"; };
+		56A8A51504DF37120CE9A29609662CDB /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A925914EC831E931E69D899E27A0542 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C862A043EBA7384D5BBDFC675A6C96D /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS.modulemap"; sourceTree = "<group>"; };
+		6BB5FF83CE53B4FE0D5E8C90C4AB1F36 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		6E319AC0E0FCD6B56288B3B45266286D /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-resources.sh"; sourceTree = "<group>"; };
+		6EBA01FC233618E661F30A4DF23E8EE8 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h"; sourceTree = "<group>"; };
+		728C132FE4E366E35F791CCE8E14961D /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		7753E00F6B92F13B8CA6FACDFABDF649 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7A7906F8CABC49AB607A40F3FAECDB15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5224CA191FE1A883F74F3E7F308545 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7D446B76CB67B0591DAF4B15AB8F2251 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap"; sourceTree = "<group>"; };
+		84068F96CD0749C6A6E0FCB6CD4C6160 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-dummy.m"; sourceTree = "<group>"; };
+		866D63000C50B5E3C00B7E6C67A92F96 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-resources.sh"; sourceTree = "<group>"; };
+		8DD690D08BCEAE11A816171FF25202DC /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8ED5CF9532015BD35D569DE6EFB1C9D4 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap"; sourceTree = "<group>"; };
+		8F1AE1F02CD58BF3BA778D5DDC64C858 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F7E4C213539D7F1397251B3DEEF7902 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		90F3D2532977FB1BBE6E3EC6E1024830 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		911BA0753C6D07FD554547893DE52E25 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		912EDF2F6FC51C9A3FABB057B3E1731B /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AB9313BBC56993D3F2541570EBFCF0F5 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h"; sourceTree = "<group>"; };
-		AC58EED7D733A034D6AA0C516FB4762A /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		AD6778E6DC4AB275276263154AD4E383 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		B558A60F2D447BB1025ADF9143BECE94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF8E3D5ACC9765FDD4741629F9706A1C /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-resources.sh"; sourceTree = "<group>"; };
-		BFEB24E5E2611FCDD1D950E947488F4F /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C1D74D86FF91665E969241F5E81F5101 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C7F0057F92AF05AFA4165A44117FEB37 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EBD1900F39ECEBE7D31D450F189FCF66 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap"; sourceTree = "<group>"; };
-		F17107B267DCD0B624528ABCB0414241 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A6175994E0E694547BD7F471A95C2A /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m"; sourceTree = "<group>"; };
+		95F0AE63F3E34DA19AB218BA92EC1907 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		984CDFEBAD71CE0B2D61BF9104D659D8 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9AC509F29F5AE7CB5F8C708FB6A61AF1 /* Pods_Samples_DGCollectionViewGridLayoutSample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGCollectionViewGridLayoutSample_tvOS.framework; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A18F560B00923657E6D3D7677502A83E /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m"; sourceTree = "<group>"; };
+		A429706E4E849399066D7223AF1BC9C9 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		A71260F71C0FBF0D716C1CD9EB4BD15E /* Pods_Tests_DGCollectionViewGridLayoutTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests_DGCollectionViewGridLayoutTests_tvOS.framework; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C8A65C1ED4BA8EEDF5B734A210C4AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9684018DF6A9686A2341B24F6DC591 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CF899019E20CA0E22DD459687C3470E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0FAF0042B3F2A9AE7F2995D67124C84 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA79596CA2AF3215D082F3CE0A448948 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		E097A4971ECE767E0AFA80C263CFB58A /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS-resources.sh"; sourceTree = "<group>"; };
+		E2E5B1E60D7FAC2F87CA5706DB734E85 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		E711514362DC6FAEBEEE5A9106F49261 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		E874D37BA28C35CB1E8D283FE1406178 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E9561C2A293AAAAF6395B6ECD1AC3A9B /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m"; sourceTree = "<group>"; };
+		E9EE2EB9B1323566EF2812AA23C071F5 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		EE313A9DA25ED98D52B25F7C4938C7F4 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m"; sourceTree = "<group>"; };
+		EE4783B4F6D07DEA1738133E36155D0C /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		EEA4C0EB2B080C4C5F1251A3C64190DA /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F297C1DA70F00C71D54E618E0F8D4407 /* Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework; path = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F479C5DD3CF849C8C2CDDA2600A655BD /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h"; sourceTree = "<group>"; };
+		F4DD7949A283303DCD735A2593DC6208 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		F6EAAC29844AE77D690E1CC24AEB5DE3 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.modulemap"; sourceTree = "<group>"; };
+		F75105340B5F99ABADFC3D4719FA0942 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F9584830BCC998D4F0504DB4D4D6D581 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +103,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B0A7A690486744DBBF64FFC362D20F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D3EB59F542174A62BD01CF648132353 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4990E2A33FF41E6D9A1C2455B69BE4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938931DBB8CE223728915480ECA1F47E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0909E47D2A3D8881E2C3C583A6333173 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9907101EA426116243E70B4302965BB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5F32939DB43E7F961DEA68D4E7432B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,103 +149,171 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19BA64380617703432B094ED855D0B01 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS */ = {
+		020365BD384A52130E3053FA12D7367A /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				88B8AE5AFE33CACA0E9909BC9FB87ADF /* Info.plist */,
-				EBD1900F39ECEBE7D31D450F189FCF66 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap */,
-				46F70850B2A0BF9BC69704700FCAFEFE /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.markdown */,
-				0069CB4C3C2445EEDB9BE54B177194B3 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.plist */,
-				3B2973A0043ADC0B8BD6025D0A4DAF43 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m */,
-				2385CF047C93C874225A17CB563CB278 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-frameworks.sh */,
-				BF8E3D5ACC9765FDD4741629F9706A1C /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-resources.sh */,
-				AB9313BBC56993D3F2541570EBFCF0F5 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h */,
-				4DDC8C64ADEFB112E824CDA5B723FA0C /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */,
-				8EC741A98D5323BF6136FC9F1C9CDC9B /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */,
+				7A7906F8CABC49AB607A40F3FAECDB15 /* Info.plist */,
+				F6EAAC29844AE77D690E1CC24AEB5DE3 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.modulemap */,
+				7753E00F6B92F13B8CA6FACDFABDF649 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-acknowledgements.markdown */,
+				D0FAF0042B3F2A9AE7F2995D67124C84 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-acknowledgements.plist */,
+				513269D90C45A695FAEC49F239D8384E /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-dummy.m */,
+				DA79596CA2AF3215D082F3CE0A448948 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-frameworks.sh */,
+				0D19DE4901B86CBE07BBBA28D64E6D50 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-resources.sh */,
+				E711514362DC6FAEBEEE5A9106F49261 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-umbrella.h */,
+				2E40420E7CD44EC55B12B4F3F8AE42E9 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.debug.xcconfig */,
+				F75105340B5F99ABADFC3D4719FA0942 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.release.xcconfig */,
 			);
-			name = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS";
-			path = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-iOS";
+			name = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS";
+			path = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS";
 			sourceTree = "<group>";
 		};
-		1BD4A76E4A454D1ED97E8DC231D039EB /* Targets Support Files */ = {
+		38A500B3EF6F09D60FCA04AED82C3D7F /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				DE03922F8077EC2CD9D15CC3C8A0FFB4 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS */,
-				19BA64380617703432B094ED855D0B01 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS */,
-				663115B27A585E91D6611153F90219B9 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS */,
+				A8C8A65C1ED4BA8EEDF5B734A210C4AF /* Info.plist */,
+				5591EC48CE332C4BC1EF1D2624D45715 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.modulemap */,
+				90F3D2532977FB1BBE6E3EC6E1024830 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-acknowledgements.markdown */,
+				728C132FE4E366E35F791CCE8E14961D /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-acknowledgements.plist */,
+				84068F96CD0749C6A6E0FCB6CD4C6160 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-dummy.m */,
+				F9584830BCC998D4F0504DB4D4D6D581 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-frameworks.sh */,
+				330D70BA7AD66622B8F757D8586BE5CF /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-resources.sh */,
+				F4DD7949A283303DCD735A2593DC6208 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-umbrella.h */,
+				95F0AE63F3E34DA19AB218BA92EC1907 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.debug.xcconfig */,
+				EE4783B4F6D07DEA1738133E36155D0C /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS";
+			path = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS";
 			sourceTree = "<group>";
 		};
-		663115B27A585E91D6611153F90219B9 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS */ = {
+		40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B558A60F2D447BB1025ADF9143BECE94 /* Info.plist */,
-				29938C4B11F0293FA071D464311EF2BD /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap */,
-				489CAC275AD8BBCD8C516E04A2FADE44 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.markdown */,
-				C7F0057F92AF05AFA4165A44117FEB37 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.plist */,
-				F8A6175994E0E694547BD7F471A95C2A /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m */,
-				AC58EED7D733A034D6AA0C516FB4762A /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-frameworks.sh */,
-				7B487D154F813F5E086EDDB55057A844 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-resources.sh */,
-				760DE155EEE0D70C1BFE2F5536D893ED /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h */,
-				C1D74D86FF91665E969241F5E81F5101 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */,
-				2B087A0FA609B7A10ED1403C96E55EA7 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */,
-			);
-			name = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS";
-			path = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS";
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		6CC9DA9B309FC426848E6775B2BAE4DF /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8F1AE1F02CD58BF3BA778D5DDC64C858 /* Info.plist */,
+				5C862A043EBA7384D5BBDFC675A6C96D /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.modulemap */,
+				912EDF2F6FC51C9A3FABB057B3E1731B /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-acknowledgements.markdown */,
+				A429706E4E849399066D7223AF1BC9C9 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-acknowledgements.plist */,
+				28DDB9FCD0C2E20714A9B644A212D3EE /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-dummy.m */,
+				E097A4971ECE767E0AFA80C263CFB58A /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-resources.sh */,
+				6BB5FF83CE53B4FE0D5E8C90C4AB1F36 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-umbrella.h */,
+				41CAA830DCC15115A06E6B8E57C2AA60 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.debug.xcconfig */,
+				EEA4C0EB2B080C4C5F1251A3C64190DA /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.release.xcconfig */,
+			);
+			name = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS";
+			path = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-tvOS";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8117CD8E6DEA9C3C4A1ABDDE27131533 /* Products */,
-				1BD4A76E4A454D1ED97E8DC231D039EB /* Targets Support Files */,
+				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
+				815D07975EEBF54E898ECB179361B78E /* Products */,
+				C632A385C2F146CE3EBC4765B4B36CE7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8117CD8E6DEA9C3C4A1ABDDE27131533 /* Products */ = {
+		815D07975EEBF54E898ECB179361B78E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D87B8A45EA904AF2AB4E1910C5F0138 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */,
-				2B435DC38F5AD61C6EF5E1BBF4610BF7 /* Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework */,
-				293D82A4F8B71858188D63D82D0931B6 /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */,
+				911BA0753C6D07FD554547893DE52E25 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */,
+				0CC35C12DD9EC9A3FD4D363409D09465 /* Pods_Frameworks_DGCollectionViewGridLayout_tvOS.framework */,
+				F297C1DA70F00C71D54E618E0F8D4407 /* Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework */,
+				9AC509F29F5AE7CB5F8C708FB6A61AF1 /* Pods_Samples_DGCollectionViewGridLayoutSample_tvOS.framework */,
+				3DA1ED98E154EADA170659F9E6272038 /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */,
+				A71260F71C0FBF0D716C1CD9EB4BD15E /* Pods_Tests_DGCollectionViewGridLayoutTests_tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		943511118926BCB835605AC72DBC7283 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				1439F40BA36B884DFCD033279DF16CDD /* Info.plist */,
+				7D446B76CB67B0591DAF4B15AB8F2251 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap */,
+				984CDFEBAD71CE0B2D61BF9104D659D8 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.markdown */,
+				0BCF16A6D99427B27414ADBA3066C1CF /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-acknowledgements.plist */,
+				EE313A9DA25ED98D52B25F7C4938C7F4 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-dummy.m */,
+				2DF43F6E00C88351B4E0E2E86A544A0B /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-frameworks.sh */,
+				866D63000C50B5E3C00B7E6C67A92F96 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-resources.sh */,
+				6EBA01FC233618E661F30A4DF23E8EE8 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS-umbrella.h */,
+				4C1AFFA06C7A7AF96DDB1D7E715AB9EB /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */,
+				AA9684018DF6A9686A2341B24F6DC591 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */,
+			);
+			name = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS";
+			path = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS";
+			sourceTree = "<group>";
+		};
+		A42F72DC1D780481325DD00969B19BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */,
+				B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DE03922F8077EC2CD9D15CC3C8A0FFB4 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS */ = {
+		B8145FA8437C0F582AC28D6500F9F677 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F17107B267DCD0B624528ABCB0414241 /* Info.plist */,
-				2254082BDEC0614FAB9A1D3B566EF9C5 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap */,
-				8B0F43EA9ACF06C2537E2EC40B49F90A /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.markdown */,
-				AD6778E6DC4AB275276263154AD4E383 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.plist */,
-				2C59665FAF2F23CD87B4E295FE2493DE /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m */,
-				325A4DFC3080BC375F46A82586E44BB2 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-resources.sh */,
-				8015E81CFF21A879402D5A1C8B146403 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h */,
-				BFEB24E5E2611FCDD1D950E947488F4F /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */,
-				922605A17F5935334B96FA13195E16A5 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */,
+				CF899019E20CA0E22DD459687C3470E5 /* Info.plist */,
+				1CF5D04E844E353A1B7F93E676FBCD39 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap */,
+				8DD690D08BCEAE11A816171FF25202DC /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.markdown */,
+				0E669C3064382413C4AF498B0EF86E9E /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-acknowledgements.plist */,
+				A18F560B00923657E6D3D7677502A83E /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m */,
+				6E319AC0E0FCD6B56288B3B45266286D /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-resources.sh */,
+				F479C5DD3CF849C8C2CDDA2600A655BD /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-umbrella.h */,
+				E874D37BA28C35CB1E8D283FE1406178 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */,
+				138CB898FFB70425F73EFF3D06F3D241 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */,
 			);
 			name = "Pods-Frameworks-DGCollectionViewGridLayout-iOS";
 			path = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS";
+			sourceTree = "<group>";
+		};
+		B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		C632A385C2F146CE3EBC4765B4B36CE7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8145FA8437C0F582AC28D6500F9F677 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS */,
+				6CC9DA9B309FC426848E6775B2BAE4DF /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS */,
+				E3071C7BDD335FDDC6E871218B858D23 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS */,
+				020365BD384A52130E3053FA12D7367A /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS */,
+				943511118926BCB835605AC72DBC7283 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS */,
+				38A500B3EF6F09D60FCA04AED82C3D7F /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E3071C7BDD335FDDC6E871218B858D23 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A925914EC831E931E69D899E27A0542 /* Info.plist */,
+				8ED5CF9532015BD35D569DE6EFB1C9D4 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap */,
+				56A8A51504DF37120CE9A29609662CDB /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.markdown */,
+				E9EE2EB9B1323566EF2812AA23C071F5 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-acknowledgements.plist */,
+				E9561C2A293AAAAF6395B6ECD1AC3A9B /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-dummy.m */,
+				E2E5B1E60D7FAC2F87CA5706DB734E85 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-frameworks.sh */,
+				40AFEA80AF86AD91F3726559097A648F /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-resources.sh */,
+				2D5FEC6A828BC5085C6B1ADF1E6C0644 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h */,
+				8F7E4C213539D7F1397251B3DEEF7902 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */,
+				7C5224CA191FE1A883F74F3E7F308545 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */,
+			);
+			name = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS";
+			path = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +335,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D7B6A9427C9D2C496C638B75C1702D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9CA3183D6571E6C9FA450F4AD72D88 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81EC9607E65076C7AAE1FF9027081D8D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554AC159E3C37D82516C25F9C118D3D8 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D56559FC8DD59EC884271EED76DD31A3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB89C0256CE3EE4ABD0AD9477908EF3F /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9A1EFFF99EB8193FC5C00B00D650AEB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCADE7D15E97559773E07443D7E8FB26 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +384,7 @@
 			);
 			name = "Pods-Frameworks-DGCollectionViewGridLayout-iOS";
 			productName = "Pods-Frameworks-DGCollectionViewGridLayout-iOS";
-			productReference = 1D87B8A45EA904AF2AB4E1910C5F0138 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */;
+			productReference = 911BA0753C6D07FD554547893DE52E25 /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6A68EC27C7883956749F26F8E2F164B1 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS */ = {
@@ -243,7 +401,24 @@
 			);
 			name = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS";
 			productName = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS";
-			productReference = 293D82A4F8B71858188D63D82D0931B6 /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */;
+			productReference = 3DA1ED98E154EADA170659F9E6272038 /* Pods_Tests_DGCollectionViewGridLayoutTests_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A0147D3180B43D33ACAAE387C631919D /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6651512B2BBB04FD895E3E3BCAF8F7C /* Build configuration list for PBXNativeTarget "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS" */;
+			buildPhases = (
+				1C069EB24389C1F635C50CFE32808405 /* Sources */,
+				9907101EA426116243E70B4302965BB2 /* Frameworks */,
+				E9A1EFFF99EB8193FC5C00B00D650AEB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS";
+			productName = "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS";
+			productReference = 9AC509F29F5AE7CB5F8C708FB6A61AF1 /* Pods_Samples_DGCollectionViewGridLayoutSample_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A7466D25D1223F9018E7C59726E3B700 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS */ = {
@@ -260,7 +435,41 @@
 			);
 			name = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS";
 			productName = "Pods-Samples-DGCollectionViewGridLayoutSample-iOS";
-			productReference = 2B435DC38F5AD61C6EF5E1BBF4610BF7 /* Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework */;
+			productReference = F297C1DA70F00C71D54E618E0F8D4407 /* Pods_Samples_DGCollectionViewGridLayoutSample_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C68CDECBCDBCA3F7939533D6753FBF95 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD5D2A6120B3FD755349DF03A6BE699 /* Build configuration list for PBXNativeTarget "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS" */;
+			buildPhases = (
+				6ED9E69B852A2E9B9C33FB27FBCC3C16 /* Sources */,
+				7D3EB59F542174A62BD01CF648132353 /* Frameworks */,
+				81EC9607E65076C7AAE1FF9027081D8D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS";
+			productName = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS";
+			productReference = A71260F71C0FBF0D716C1CD9EB4BD15E /* Pods_Tests_DGCollectionViewGridLayoutTests_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D66BFACC11B720994B9605CF33A3797B /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED1A3EED3DD62CBE1AF5F791EA4DAF9C /* Build configuration list for PBXNativeTarget "Pods-Frameworks-DGCollectionViewGridLayout-tvOS" */;
+			buildPhases = (
+				D6628ED7BA06432E9396AFE0A61896E2 /* Sources */,
+				938931DBB8CE223728915480ECA1F47E /* Frameworks */,
+				5D7B6A9427C9D2C496C638B75C1702D7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS";
+			productName = "Pods-Frameworks-DGCollectionViewGridLayout-tvOS";
+			productReference = 0CC35C12DD9EC9A3FD4D363409D09465 /* Pods_Frameworks_DGCollectionViewGridLayout_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -280,18 +489,29 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8117CD8E6DEA9C3C4A1ABDDE27131533 /* Products */;
+			productRefGroup = 815D07975EEBF54E898ECB179361B78E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				059D77E9E1066D327762C1305B485E71 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS */,
+				D66BFACC11B720994B9605CF33A3797B /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS */,
 				A7466D25D1223F9018E7C59726E3B700 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS */,
+				A0147D3180B43D33ACAAE387C631919D /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS */,
 				6A68EC27C7883956749F26F8E2F164B1 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS */,
+				C68CDECBCDBCA3F7939533D6753FBF95 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C069EB24389C1F635C50CFE32808405 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02AB94DD4792E27C1671EA10EB8D8519 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		60B7F9914AA6FF67ACEFE3744F8CF462 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,11 +520,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6ED9E69B852A2E9B9C33FB27FBCC3C16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F284C034BF2519BCAB9C00E2BDC12B98 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		948D51A63DD35ED5BEF5936D0809034A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CF7C01269E0B8551C597478B137EA75C /* Pods-Frameworks-DGCollectionViewGridLayout-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6628ED7BA06432E9396AFE0A61896E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113FEE154A369F0BB05A806A03F89A78 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +555,258 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+		1DFE4DBAB6F5503CF7FE64B8A275D860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9684018DF6A9686A2341B24F6DC591 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGCollectionViewGridLayoutTests_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1F010146A4AA8E40B8D54A31D066186F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		219638590371966DD312E13C904C11BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEA4C0EB2B080C4C5F1251A3C64190DA /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-tvOS/Pods-Frameworks-DGCollectionViewGridLayout-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGCollectionViewGridLayout_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23C63880104BADE582AA801FC3CC1845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CAA830DCC15115A06E6B8E57C2AA60 /* Pods-Frameworks-DGCollectionViewGridLayout-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-tvOS/Pods-Frameworks-DGCollectionViewGridLayout-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGCollectionViewGridLayout_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37A91051288F5C4677A13523C1C73CF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1AFFA06C7A7AF96DDB1D7E715AB9EB /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGCollectionViewGridLayoutTests_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4896C493EC6CE91A6EFC04D32083601D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138CB898FFB70425F73EFF3D06F3D241 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS/Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Frameworks_DGCollectionViewGridLayout_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5873F9C5948D1B5E42E87E7A4455305C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C5224CA191FE1A883F74F3E7F308545 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-iOS/Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGCollectionViewGridLayoutSample_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		69F8960444932D5152AB483681B4971C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,192 +847,13 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
-		};
-		1DFE4DBAB6F5503CF7FE64B8A275D860 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B087A0FA609B7A10ED1403C96E55EA7 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Tests_DGCollectionViewGridLayoutTests_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		37A91051288F5C4677A13523C1C73CF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1D74D86FF91665E969241F5E81F5101 /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Pods-Tests-DGCollectionViewGridLayoutTests-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Tests_DGCollectionViewGridLayoutTests_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4896C493EC6CE91A6EFC04D32083601D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 922605A17F5935334B96FA13195E16A5 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Frameworks-DGCollectionViewGridLayout-iOS/Pods-Frameworks-DGCollectionViewGridLayout-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Frameworks_DGCollectionViewGridLayout_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5873F9C5948D1B5E42E87E7A4455305C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EC741A98D5323BF6136FC9F1C9CDC9B /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-iOS/Pods-Samples-DGCollectionViewGridLayoutSample-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Samples_DGCollectionViewGridLayoutSample_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		A2A11881839E3693B636DF5F963391DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DDC8C64ADEFB112E824CDA5B723FA0C /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */;
+			baseConfigurationReference = 8F7E4C213539D7F1397251B3DEEF7902 /* Pods-Samples-DGCollectionViewGridLayoutSample-iOS.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -578,9 +886,114 @@
 			};
 			name = Debug;
 		};
+		B3A85F8D7089D827B8EC8C9046C8BB65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95F0AE63F3E34DA19AB218BA92EC1907 /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGCollectionViewGridLayoutTests_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D215519A641D68930A4CA1B62C3C70D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E40420E7CD44EC55B12B4F3F8AE42E9 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGCollectionViewGridLayoutSample_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D58F67BA644DB67C8B2BAC8756F78425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4783B4F6D07DEA1738133E36155D0C /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests_DGCollectionViewGridLayoutTests_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E819D9F92F4FA059531FC95F22DD436C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFEB24E5E2611FCDD1D950E947488F4F /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */;
+			baseConfigurationReference = E874D37BA28C35CB1E8D283FE1406178 /* Pods-Frameworks-DGCollectionViewGridLayout-iOS.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -612,6 +1025,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		F5AC84EB1CB736DAE7393F22E9B1023E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F75105340B5F99ABADFC3D4719FA0942 /* Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS/Pods-Samples-DGCollectionViewGridLayoutSample-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Samples_DGCollectionViewGridLayoutSample_tvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -628,8 +1076,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
-				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+				69F8960444932D5152AB483681B4971C /* Debug */,
+				1F010146A4AA8E40B8D54A31D066186F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -643,11 +1091,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8BD5D2A6120B3FD755349DF03A6BE699 /* Build configuration list for PBXNativeTarget "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3A85F8D7089D827B8EC8C9046C8BB65 /* Debug */,
+				D58F67BA644DB67C8B2BAC8756F78425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B35A366B5A3440E4B6A167342BB41204 /* Build configuration list for PBXNativeTarget "Pods-Samples-DGCollectionViewGridLayoutSample-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A2A11881839E3693B636DF5F963391DA /* Debug */,
 				5873F9C5948D1B5E42E87E7A4455305C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED1A3EED3DD62CBE1AF5F791EA4DAF9C /* Build configuration list for PBXNativeTarget "Pods-Frameworks-DGCollectionViewGridLayout-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23C63880104BADE582AA801FC3CC1845 /* Debug */,
+				219638590371966DD312E13C904C11BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6651512B2BBB04FD895E3E3BCAF8F7C /* Build configuration list for PBXNativeTarget "Pods-Samples-DGCollectionViewGridLayoutSample-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D215519A641D68930A4CA1B62C3C70D8 /* Debug */,
+				F5AC84EB1CB736DAE7393F22E9B1023E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

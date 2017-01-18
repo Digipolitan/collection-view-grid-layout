@@ -17,12 +17,12 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-jY-Woj">
                     <rect key="frame" x="5" y="0.0" width="315" height="50"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" red="0.196931671" green="0.196931671" blue="0.196931671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.82174707528928981" green="0.83328331430150471" blue="0.84753481217616577" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.93798575129533679" green="0.93798575129533679" blue="0.93798575129533679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Q70-jY-Woj" secondAttribute="trailing" id="AkZ-sq-bfs"/>
                 <constraint firstItem="Q70-jY-Woj" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Cad-FZ-ukI"/>

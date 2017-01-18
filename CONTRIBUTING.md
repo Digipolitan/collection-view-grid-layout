@@ -1,4 +1,4 @@
-# Contributing to collection-view-grid-layout
+# Contributing to collection-view-grid-layout-swift
 
 First off, thanks for taking the time to contribute! :tada::+1:
 
@@ -43,19 +43,19 @@ Explain the problem and include additional details to help maintainers reproduce
 * **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
 * **Explain which behavior you expected to see instead and why.**
 * **Include screenshots and animated GIFs** which show you following the described steps and clearly demonstrate the problem.
-* **If you're reporting that collection-view-grid-layout crashed**, include a crash report with a stack trace from the operating system. On iOS, the crash report is available in Xcode, on macOS, the crash report will be available in `Console.app` under "Diagnostic and usage information" > "User diagnostic reports". Include the crash report in the issue in a [code block](https://help.github.com/articles/markdown-basics/#multiple-lines), a [file attachment](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or put it in a [gist](https://gist.github.com/) and provide link to that gist.
+* **If you're reporting that collection-view-grid-layout-swift crashed**, include a crash report with a stack trace from the operating system. On iOS, the crash report is available in Xcode, on macOS, the crash report will be available in `Console.app` under "Diagnostic and usage information" > "User diagnostic reports". Include the crash report in the issue in a [code block](https://help.github.com/articles/markdown-basics/#multiple-lines), a [file attachment](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or put it in a [gist](https://gist.github.com/) and provide link to that gist.
 * **If the problem is related to performance**, include a CPU profile capture and a screenshot with your report.
 * **If the problem wasn't triggered by a specific action**, describe what you were doing before the problem happened and share more information using the guidelines below.
 
 Provide more context by answering these questions:
 
-* **Did the problem start happening recently** (e.g. after updating to a new version of collection-view-grid-layout) or was this always a problem?
-* If the problem started happening recently, **can you reproduce the problem in an older version of collection-view-grid-layout ?** What's the most recent version in which the problem doesn't happen? You can download older versions of collection-view-grid-layout from [the releases page](https://github.com/digipolitan/collection-view-grid-layout/releases).
+* **Did the problem start happening recently** (e.g. after updating to a new version of collection-view-grid-layout-swift) or was this always a problem?
+* If the problem started happening recently, **can you reproduce the problem in an older version of collection-view-grid-layout-swift ?** What's the most recent version in which the problem doesn't happen? You can download older versions of collection-view-grid-layout-swift from [the releases page](https://github.com/digipolitan/collection-view-grid-layout-swift/releases).
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
 
 Include details about your configuration and environment:
 
-* **Which version of collection-view-grid-layout are you using?
+* **Which version of collection-view-grid-layout-swift are you using?
 * **What's the name and version of the macOS or iOS you're using**?
 
 #### Template For Submitting Bug Reports
@@ -80,7 +80,7 @@ Include details about your configuration and environment:
 
     ![Screenshots and GIFs which follow reproduction steps to demonstrate the problem](url)
 
-    **collection-view-grid-layout version:** [Enter collection-view-grid-layout version here]
+    **collection-view-grid-layout-swift version:** [Enter collection-view-grid-layout-swift version here]
     **OS and version:** [Enter macOS / iOS / linux name and version here]
 
     **Installed packages:**
@@ -89,6 +89,6 @@ Include details about your configuration and environment:
 
     **Additional information:**
 
-    * Problem started happening recently, didn't happen in an older version of collection-view-grid-layout: [Yes/No]
+    * Problem started happening recently, didn't happen in an older version of collection-view-grid-layout-swift: [Yes/No]
     * Problem can be reliably reproduced, doesn't happen randomly: [Yes/No]
     * Problem happens with all files and projects, not only some files or projects: [Yes/No]

@@ -1,4 +1,2 @@
-disabled_rules: # rule identifiers to exclude from running
-  - statement_position
-
-line_length: 150
+line_length: 200
+file_length: 500
