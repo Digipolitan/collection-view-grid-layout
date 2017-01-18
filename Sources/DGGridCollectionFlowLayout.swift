@@ -111,8 +111,10 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 		super.prepare()
 
+        #if os(iOS)
 		NotificationCenter.default.removeObserver(self)
 		NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        #endif
 
 		self.setNumberOfSections()
 		self.setNumberOfItemsInSections()
@@ -427,9 +429,11 @@ extension DGCollectionViewGridLayout {
 	}
 }
 
+#if os(iOS)
 extension DGCollectionViewGridLayout {
 	@objc
 	fileprivate func rotated () {
 		self.invalidateLayout()
 	}
 }
+#endif
