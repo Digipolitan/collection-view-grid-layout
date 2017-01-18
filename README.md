@@ -43,8 +43,6 @@ end
 	let layout =  DGCollectionViewGridLayout()
 ```
 
-
-
 ### Configuration
 
 You can customize the component by enabling few options:
@@ -68,7 +66,7 @@ self.collectionView.dataSource = self
 
 ```swift
 	/**
-	Gives the height of an item at an IndexPath. The highest item in the row will set the 
+	Gives the height of an item at an IndexPath. The highest item in the row will set the
 	height of the row. Default is 100.
 	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
@@ -124,5 +122,3 @@ unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.co
 ## License
 
 DGCollectionGridViewLayout is licensed under the [BSD 3-Clause license](LICENSE).
-
-
