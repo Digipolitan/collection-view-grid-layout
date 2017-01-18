@@ -12,8 +12,8 @@
 		A3169DF81DE0718900BABAFD /* DGCollectionViewGridLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169DEF1DE0718900BABAFD /* DGCollectionViewGridLayout.framework */; };
 		A3169E761DE083D900BABAFD /* DGCollectionViewGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3169E781DE083D900BABAFD /* DGCollectionViewGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A31F2D201E2E818C0090B348 /* DGGridCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F2D1F1E2E818C0090B348 /* DGGridCollectionFlowLayout.swift */; };
-		A31F2D211E2E818C0090B348 /* DGGridCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F2D1F1E2E818C0090B348 /* DGGridCollectionFlowLayout.swift */; };
+		A31F2D201E2E818C0090B348 /* DGCollectionViewGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F2D1F1E2E818C0090B348 /* DGCollectionViewGridLayout.swift */; };
+		A31F2D211E2E818C0090B348 /* DGCollectionViewGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F2D1F1E2E818C0090B348 /* DGCollectionViewGridLayout.swift */; };
 		A38EF2CA1DECF97000637484 /* DGCollectionViewGridLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGCollectionViewGridLayoutTests.swift */; };
 		A38EF2CB1DECF97000637484 /* DGCollectionViewGridLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGCollectionViewGridLayoutTests.swift */; };
 		C9E3768D8ED3A2FED400175E /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2494DD44EA9CC75384BAC9BC /* Pods_Frameworks_DGCollectionViewGridLayout_iOS.framework */; };
@@ -56,7 +56,7 @@
 		A3169E0C1DE072C700BABAFD /* DGCollectionViewGridLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGCollectionViewGridLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E141DE072C800BABAFD /* DGCollectionViewGridLayoutTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGCollectionViewGridLayoutTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGCollectionViewGridLayout.h; sourceTree = "<group>"; };
-		A31F2D1F1E2E818C0090B348 /* DGGridCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGGridCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		A31F2D1F1E2E818C0090B348 /* DGCollectionViewGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGCollectionViewGridLayout.swift; sourceTree = "<group>"; };
 		A38EF2C71DECF97000637484 /* DGCollectionViewGridLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGCollectionViewGridLayoutTests.swift; sourceTree = "<group>"; };
 		A3A2E8A32C9E7260AB29B47D /* Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-iOS/Pods-Tests-DGCollectionViewGridLayoutTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CEA9627CBD50052015968B4D /* Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS/Pods-Tests-DGCollectionViewGridLayoutTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				A3169E751DE083D900BABAFD /* DGCollectionViewGridLayout.h */,
-				A31F2D1F1E2E818C0090B348 /* DGGridCollectionFlowLayout.swift */,
+				A31F2D1F1E2E818C0090B348 /* DGCollectionViewGridLayout.swift */,
 				A3169DCC1DE0629100BABAFD /* Info.plist */,
 			);
 			path = Sources;
@@ -558,7 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31F2D201E2E818C0090B348 /* DGGridCollectionFlowLayout.swift in Sources */,
+				A31F2D201E2E818C0090B348 /* DGCollectionViewGridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31F2D211E2E818C0090B348 /* DGGridCollectionFlowLayout.swift in Sources */,
+				A31F2D211E2E818C0090B348 /* DGCollectionViewGridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

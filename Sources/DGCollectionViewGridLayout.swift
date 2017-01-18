@@ -259,7 +259,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
                         let itemHeight = self.delegate?
                             .collectionView?(collectionView, layout: self, heightForItemAt: indexPath, columnWidth: self.columnWidth) ?? Defaults.lineHeight
-                        
+
                         lineHeight = max(lineHeight, itemHeight)
                     }
                     linesHeight[line] = lineHeight
