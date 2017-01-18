@@ -67,37 +67,37 @@ self.collectionView.dataSource = self
 - DGCollectionViewGridLayoutDelegate
 
 ```swift
-/**
-Gives the height of an item at an IndexPath. The highest item in the row will set the
-height of the row. Default is 100.
-**/
-@objc optional func collectionView(_ collectionView: UICollectionView,
-                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-                                          heightForItemAt indexPath: IndexPath,
-                                          columnWidth: CGFloat) -> CGFloat
-/**
-Gives the height of a ReusableView of Type Header. If no height is provided,
-no header will be displayed.
-**/
-@objc optional func collectionView(_ collectionView: UICollectionView,
-                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-                                          heightForHeaderIn section: Int) -> CGFloat
-/**
-Gives the height of a ReusableView of Type Footer. If no height is provided,
-no footer will be displayed.
-**/
-@objc optional func collectionView(_ collectionView: UICollectionView,
-                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-                                          heightForFooterIn section: Int) -> CGFloat
+	/**
+	Gives the height of an item at an IndexPath. The highest item in the row will set the 
+	height of the row. Default is 100.
+	**/
+	@objc optional func collectionView(_ collectionView: UICollectionView,
+	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
+	                                          heightForItemAt indexPath: IndexPath,
+	                                          columnWidth: CGFloat) -> CGFloat
+	/**
+	Gives the height of a ReusableView of Type Header. If no height is provided,
+	no header will be displayed.
+	**/
+	@objc optional func collectionView(_ collectionView: UICollectionView,
+	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
+	                                          heightForHeaderIn section: Int) -> CGFloat
+	/**
+	Gives the height of a ReusableView of Type Footer. If no height is provided,
+	no footer will be displayed.
+	**/
+	@objc optional func collectionView(_ collectionView: UICollectionView,
+	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
+	                                          heightForFooterIn section: Int) -> CGFloat
 ```
 
 - DGCollectionViewGridLayoutDataSource
 
 ```swift
-/**
-Gives the same width for each items depending on the value returned. Default is 1.
-**/
-@objc optional func numberOfColumns(in collectionView: UICollectionView) -> Int
+	/**
+	Gives the same width for each items depending on the value returned. Default is 1.
+	**/
+	@objc optional func numberOfColumns(in collectionView: UICollectionView) -> Int
 ```
 
 ## Limitations
@@ -124,3 +124,5 @@ unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.co
 ## License
 
 DGCollectionGridViewLayout is licensed under the [BSD 3-Clause license](LICENSE).
+
+
