@@ -178,7 +178,7 @@
         <scene sceneID="W8s-g5-9U9">
             <objects>
                 <navigationController id="lGA-NA-acN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ejR-aV-P1t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ejR-aV-P1t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
