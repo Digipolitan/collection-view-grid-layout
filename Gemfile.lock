@@ -65,11 +65,11 @@ GEM
     faraday-cookie_jar (0.0.6)
       faraday (>= 0.7.4)
       http-cookie (~> 1.0.0)
-    faraday_middleware (0.11.0)
+    faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.0.1)
       addressable (~> 2)
-    fastlane (2.8.0)
+    fastlane (2.9.0)
       activesupport (< 5)
       addressable (>= 2.3, < 3.0.0)
       babosa (>= 1.0.2, < 2.0.0)
@@ -103,7 +103,7 @@ GEM
     fourflusher (2.0.1)
     fuzzy_match (2.0.4)
     gh_inspector (1.0.3)
-    google-api-client (0.9.20)
+    google-api-client (0.9.23)
       addressable (~> 2.3)
       googleauth (~> 0.5)
       httpclient (~> 2.7)
@@ -192,4 +192,4 @@ DEPENDENCIES
   fastlane
 
 BUNDLED WITH
-   1.13.6
+   1.13.7

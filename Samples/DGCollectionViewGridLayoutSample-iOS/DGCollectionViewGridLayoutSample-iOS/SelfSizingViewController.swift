@@ -10,7 +10,8 @@ import UIKit
 import DGCollectionViewGridLayout
 
 class SelfSizingViewController: OriginalViewController {
-	var prototype: DescriptionCell? = nil
+
+	var prototype: DescriptionCell?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
