@@ -111,8 +111,10 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 
 		super.prepare()
 
+        #if os(iOS)
 		NotificationCenter.default.removeObserver(self)
 		NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        #endif
 
 		self.setNumberOfSections()
 		self.setNumberOfItemsInSections()
@@ -256,7 +258,7 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
                         let indexPath = IndexPath(item: item, section: section)
                         let itemHeight = self.delegate?
                             .collectionView?(collectionView, layout: self, heightForItemAt: indexPath, columnWidth: self.columnWidth) ?? Defaults.lineHeight
-                        
+
                         lineHeight = max(lineHeight, itemHeight)
                     }
                     linesHeight[line] = lineHeight
@@ -426,9 +428,11 @@ extension DGCollectionViewGridLayout {
 	}
 }
 
+#if os(iOS)
 extension DGCollectionViewGridLayout {
 	@objc
 	fileprivate func rotated () {
 		self.invalidateLayout()
 	}
 }
+#endif

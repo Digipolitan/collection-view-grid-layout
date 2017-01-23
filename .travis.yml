@@ -13,6 +13,7 @@ before_install:
   - gem install bundler
   - brew update
   - bundle install && brew bundle
+  - bundle exec pod repo update --silent
 script:
   - bundle exec fastlane run_tests
 after_success:

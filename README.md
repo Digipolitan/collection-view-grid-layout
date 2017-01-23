@@ -1,4 +1,11 @@
-# DGCollectionViewGridLayout
+DGCollectionViewGridLayout
+=================================
+
+[![Build Status](https://travis-ci.org/Digipolitan/collection-view-grid-layout-swift.svg?branch=master)](https://travis-ci.org/Digipolitan/collection-view-grid-layout-swift)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DGCollectionViewGridLayout.svg)](https://img.shields.io/cocoapods/v/DGCollectionViewGridLayout.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Platform](https://img.shields.io/cocoapods/p/DGCollectionViewGridLayout.svg?style=flat)](http://cocoadocs.org/docsets/DGCollectionViewGridLayout)
+[![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
 Layout that allows you to display collection of data in grid without only **very few** lines of codes.
 It can have the look of a `UITableView` or a `UICollectionView`.
@@ -43,8 +50,6 @@ end
 	let layout =  DGCollectionViewGridLayout()
 ```
 
-
-
 ### Configuration
 
 You can customize the component by enabling few options:
@@ -68,7 +73,7 @@ self.collectionView.dataSource = self
 
 ```swift
 	/**
-	Gives the height of an item at an IndexPath. The highest item in the row will set the 
+	Gives the height of an item at an IndexPath. The highest item in the row will set the
 	height of the row. Default is 100.
 	**/
 	@objc optional func collectionView(_ collectionView: UICollectionView,
@@ -124,5 +129,3 @@ unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.co
 ## License
 
 DGCollectionGridViewLayout is licensed under the [BSD 3-Clause license](LICENSE).
-
-
