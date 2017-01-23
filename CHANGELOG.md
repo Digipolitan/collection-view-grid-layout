@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.5](https://github.com/Digipolitan/collection-view-grid-layout-swift/releases/tag/v1.0.5)
+
+update swiftlint & clean code
+add bundle update
+update gitattributes
+fixed indexPath calcuation during the 'setHeightForLinesInSections'
+
+---
+
 ## [1.0.4](https://github.com/Digipolitan/collection-view-grid-layout-swift/releases/tag/v1.0.4)
 
 add gitattributes & update travis
