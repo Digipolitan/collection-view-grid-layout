@@ -250,11 +250,10 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
                 var lineHeight: CGFloat = 0
                 for line in 0...(lines - 1) {
                     lineHeight = 0
-                    let start = max(0, line - 1) * self.numberOfColumns
-                    let end = max(1, line) * self.numberOfColumns
-                    for item in start...(end - 1) {
-                        let indexPath = IndexPath(item: ((line * self.numberOfColumns) + item), section: section)
-
+                    let start = line * self.numberOfColumns
+                    let end = (line + 1) * self.numberOfColumns
+					for item in start...(end - 1) {
+                        let indexPath = IndexPath(item: item, section: section)
                         let itemHeight = self.delegate?
                             .collectionView?(collectionView, layout: self, heightForItemAt: indexPath, columnWidth: self.columnWidth) ?? Defaults.lineHeight
                         
