@@ -10,6 +10,9 @@ import UIKit
 import DGCollectionViewGridLayout
 
 class ClassicGridViewController: OriginalViewController {
+	var control = UIRefreshControl()
+	var itemCount = 100
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
@@ -30,6 +33,21 @@ class ClassicGridViewController: OriginalViewController {
 		self.collectionView.collectionViewLayout = layout
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
+		if #available(iOS 10.0, *) {
+			self.control.addTarget(self, action: #selector(reloadData), for: UIControlEvents.allEvents)
+			self.collectionView.refreshControl = control
+
+		} else {
+			// Fallback on earlier versions
+		}
+	}
+
+	func reloadData() {
+		self.itemCount = 0
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+			self.collectionView.reloadData()
+			self.control.endRefreshing()
+		})
 	}
 }
 
@@ -47,7 +65,7 @@ extension ClassicGridViewController: DGCollectionViewGridLayoutDataSource {
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 10
+		return itemCount
 
 	}
 
