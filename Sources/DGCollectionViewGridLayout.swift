@@ -152,6 +152,12 @@ open class DGCollectionViewGridLayout: UICollectionViewLayout {
 		return max(collectionViewHeight, height)
 	}
 
+	open override func invalidateLayout() {
+		super.invalidateLayout()
+		self.itemsInfoAtIndexPath.removeAll()
+		self.supplementaryViewsInfoInSection.removeAll()
+	}
+
 	// #3
 	// After processed the layoutAttributes and the content size 
 	// The collection view will ask to its layout the element attributes to draw in a given rect.
