@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.6](https://github.com/Digipolitan/collection-view-grid-layout-swift/releases/tag/v1.0.6)
+
+updated Samples
+fixed layout invalidation where deleting elements was causing AssertionFailure
+
+---
+
 ## [1.0.5](https://github.com/Digipolitan/collection-view-grid-layout-swift/releases/tag/v1.0.5)
 
 update swiftlint & clean code
