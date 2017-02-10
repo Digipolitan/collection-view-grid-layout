@@ -11,7 +11,7 @@ notifications:
   email: false
 before_install:
   - gem install bundler
-  - brew update
+  - bundle update && brew update
   - bundle install && brew bundle
   - bundle exec pod repo update --silent
 script:
