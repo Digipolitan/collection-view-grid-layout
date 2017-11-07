@@ -1,122 +1,136 @@
-DGCollectionViewGridLayout
+CollectionViewGridLayout
 =================================
 
-[![Build Status](https://travis-ci.org/Digipolitan/collection-view-grid-layout-swift.svg?branch=master)](https://travis-ci.org/Digipolitan/collection-view-grid-layout-swift)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DGCollectionViewGridLayout.svg)](https://img.shields.io/cocoapods/v/DGCollectionViewGridLayout.svg)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/cocoapods/p/DGCollectionViewGridLayout.svg?style=flat)](http://cocoadocs.org/docsets/DGCollectionViewGridLayout)
+[![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Build Status](https://travis-ci.org/Digipolitan/collection-view-grid-layout.svg?branch=master)](https://travis-ci.org/Digipolitan/collection-view-grid-layout)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CollectionViewGridLayout.svg)](https://img.shields.io/cocoapods/v/CollectionViewGridLayout.svg)
+[![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Platform](https://img.shields.io/cocoapods/p/CollectionViewGridLayout.svg?style=flat)](http://cocoadocs.org/docsets/CollectionViewGridLayout)
 [![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
 Layout that allows you to display collection of data in grid without only **very few** lines of codes.
 It can have the look of a `UITableView` or a `UICollectionView`.
 
-![DGCollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/develop/Screenshots/grid-1.gif?raw=true "Example 1")
-![DGCollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/develop/Screenshots/grid-2.gif?raw=true "Example 2")
+![CollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/master/Screenshots/grid-1.gif?raw=true "Example 1")
+![CollectionGridViewLayout Sample](https://github.com/Digipolitan/collection-view-grid-layout/blob/master/Screenshots/grid-2.gif?raw=true "Example 2")
 
-## Getting Started
+## Installation
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### CocoaPods
 
-### Prerequisites
+To install CollectionViewGridLayout with CocoaPods, add the following lines to your `Podfile`.
 
-Works with iOS 8+, tested on Xcode 8.2
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
 
-### Installing
-
-To install the DGCollectionGridViewLayout using **cocoapods**
-
-- Add an entry in your Podfile  
-
-```
-# Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
-
-target 'YourTarget' do
-  frameworks
-   use_frameworks!
-
-  # Pods for YourTarget
-  pod 'DGCollectionViewGridLayout'
-end
+pod 'CollectionViewGridLayout'
 ```
 
-- Then install the dependency with the `pod install` command.
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate CollectionViewGridLayout into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```
+github 'Digipolitan/collection-view-grid-layout ~> 2.0
+```
+
+Run `carthage update` to build the framework and drag the built `CollectionViewGridLayout.framework` into your Xcode project.
 
 ## Usage
 
-- Initialize your layout by instantiate a DGCollectionViewGridLayout.
+- Initialize your layout by instantiate a `CollectionViewVerticalGridLayout` or `CollectionViewHorizontalGridLayout`.
 
 ```swift
-	let layout =  DGCollectionViewGridLayout()
-```
-
-### Configuration
-
-You can customize the component by enabling few options:
-
-```swift
-layout.lineSpacing = 10
-layout.columnSpacing = 10
-layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+	let layout =  CollectionViewVerticalGridLayout()
 ```
 
 ### Interacting with the component
 
-To Communicate with the layout, use the same way than `UICollectionViewFlowLayout`. Declare your component as `DGCollectionViewGridLayoutDelegate` and `DGCollectionViewGridLayoutDataSource`, those inheriting respectively from `UICollectionViewDelegate` and `UICollectionViewDataSource` you just have to assign it to your `collectionView`.
+To Communicate with the layout, use the same way than `UICollectionViewFlowLayout`. Declare your component as `CollectionViewDelegateVerticalGridLayout` or `CollectionViewDelegateHorizontalGridLayout`, those inheriting respectively from `UICollectionViewDelegate` and `UICollectionViewDataSource` you just have to assign it to your `collectionView`.
 
 ```swift
 self.collectionView.delegate = self
 self.collectionView.dataSource = self
 ```
 
-- DGCollectionViewGridLayoutDelegate
+- Common protocol for all grid layout direction
 
 ```swift
-	/**
-	Gives the height of an item at an IndexPath. The highest item in the row will set the
-	height of the row. Default is 100.
-	**/
-	@objc optional func collectionView(_ collectionView: UICollectionView,
-	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-	                                          heightForItemAt indexPath: IndexPath,
-	                                          columnWidth: CGFloat) -> CGFloat
-	/**
-	Gives the height of a ReusableView of Type Header. If no height is provided,
-	no header will be displayed.
-	**/
-	@objc optional func collectionView(_ collectionView: UICollectionView,
-	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-	                                          heightForHeaderIn section: Int) -> CGFloat
-	/**
-	Gives the height of a ReusableView of Type Footer. If no height is provided,
-	no footer will be displayed.
-	**/
-	@objc optional func collectionView(_ collectionView: UICollectionView,
-	                                          layout collectionViewLayout: DGCollectionViewGridLayout,
-	                                          heightForFooterIn section: Int) -> CGFloat
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       rowSpacingForSection section: Int) -> CGFloat
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       columnSpacingForSection section: Int) -> CGFloat
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       insetForSection section: Int) -> UIEdgeInsets
 ```
 
-- DGCollectionViewGridLayoutDataSource
+- CollectionViewDelegateVerticalGridLayout
 
 ```swift
-	/**
-	Gives the same width for each items depending on the value returned. Default is 1.
-	**/
-	@objc optional func numberOfColumns(in collectionView: UICollectionView) -> Int
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       numberOfColumnsForSection section: Int) -> Int
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       weightForColumn column: Int,
+                                       inSection section: Int) -> CGFloat
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       heightForItemAt indexPath: IndexPath,
+                                       columnWidth: CGFloat) -> CGFloat
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       heightForHeaderInSection section: Int) -> CGFloat
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       heightForFooterInSection section: Int) -> CGFloat
 ```
 
-## Limitations
+- CollectionViewDelegateHorizontalGridLayout
 
-Current limitations are :
-- Performances issues when more than 3k items. (WIP)
-- Decoration View not handled
-- Scroll direction only vertical
+```swift
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       numberOfRowsForSection section: Int) -> Int
 
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       weightForRow row: Int,
+                                       inSection section: Int) -> CGFloat
 
-## Built With
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       widthForItemAt indexPath: IndexPath,
+                                       rowHeight: CGFloat) -> CGFloat
 
-[Fastlane](https://fastlane.tools/)
-Fastlane is a tool for iOS, Mac, and Android developers to automate tedious tasks like generating screenshots, dealing with provisioning profiles, and releasing your application.
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       widthForHeaderInSection section: Int) -> CGFloat
+
+  @objc optional func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       widthForFooterInSection section: Int) -> CGFloat
+```
 
 ## Contributing
 
@@ -128,4 +142,4 @@ unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.co
 
 ## License
 
-DGCollectionGridViewLayout is licensed under the [BSD 3-Clause license](LICENSE).
+CollectionViewGridLayout is licensed under the [BSD 3-Clause license](LICENSE).

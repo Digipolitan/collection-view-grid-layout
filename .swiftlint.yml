@@ -1,2 +1,6 @@
-line_length: 200
+excluded:
+  - Carthage
+  - Pods
+function_body_length: 50
+line_length: 250
 file_length: 500

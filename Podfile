@@ -1,13 +1,13 @@
-workspace 'DGCollectionViewGridLayout.xcworkspace'
+workspace 'CollectionViewGridLayout.xcworkspace'
 
 ## Frameworks targets
 abstract_target 'Frameworks' do
 	use_frameworks!
-	target 'DGCollectionViewGridLayout-iOS' do
+	target 'CollectionViewGridLayout-iOS' do
 		platform :ios, '8.0'
 	end
 
-	target 'DGCollectionViewGridLayout-tvOS' do
+	target 'CollectionViewGridLayout-tvOS' do
 		platform :tvos, '9.0'
 	end
 end
@@ -15,11 +15,11 @@ end
 ## Tests targets
 abstract_target 'Tests' do
 	use_frameworks!
-	target 'DGCollectionViewGridLayoutTests-iOS' do
+	target 'CollectionViewGridLayoutTests-iOS' do
 		platform :ios, '8.0'
 	end
 
-	target 'DGCollectionViewGridLayoutTests-tvOS' do
+	target 'CollectionViewGridLayoutTests-tvOS' do
 		platform :tvos, '9.0'
 	end
 end
@@ -27,13 +27,13 @@ end
 ## Samples targets
 abstract_target 'Samples' do
 	use_frameworks!
-	target 'DGCollectionViewGridLayoutSample-iOS' do
-		project 'Samples/DGCollectionViewGridLayoutSample-iOS/DGCollectionViewGridLayoutSample-iOS'
+	target 'CollectionViewGridLayoutSample-iOS' do
+		project 'Samples/CollectionViewGridLayoutSample-iOS/CollectionViewGridLayoutSample-iOS'
 		platform :ios, '8.0'
 	end
 
-	target 'DGCollectionViewGridLayoutSample-tvOS' do
-		project 'Samples/DGCollectionViewGridLayoutSample-tvOS/DGCollectionViewGridLayoutSample-tvOS'
+	target 'CollectionViewGridLayoutSample-tvOS' do
+		project 'Samples/CollectionViewGridLayoutSample-tvOS/CollectionViewGridLayoutSample-tvOS'
 		platform :tvos, '9.0'
 	end
 end
