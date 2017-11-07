@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.0.0](https://github.com/Digipolitan/collection-view-grid-layout/releases/tag/v2.0.0)
+
+Major update, layout horizontal & vertical
+Support more than 1M elements
+
+---
+
 ## [1.0.6](https://github.com/Digipolitan/collection-view-grid-layout/releases/tag/v1.0.6)
 
 updated Samples
