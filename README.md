@@ -1,7 +1,7 @@
 CollectionViewGridLayout
 =================================
 
-[![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift Version](https://img.shields.io/badge/swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Build Status](https://travis-ci.org/Digipolitan/collection-view-grid-layout.svg?branch=master)](https://travis-ci.org/Digipolitan/collection-view-grid-layout)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CollectionViewGridLayout.svg)](https://img.shields.io/cocoapods/v/CollectionViewGridLayout.svg)
 [![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -42,7 +42,7 @@ $ brew install carthage
 To integrate CollectionViewGridLayout into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```
-github 'Digipolitan/collection-view-grid-layout ~> 2.0
+github 'Digipolitan/collection-view-grid-layout ~> 2.1
 ```
 
 Run `carthage update` to build the framework and drag the built `CollectionViewGridLayout.framework` into your Xcode project.
