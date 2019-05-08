@@ -8,27 +8,38 @@ Make sure you have the latest version of the Xcode command line tools installed:
 xcode-select --install
 ```
 
-## Choose your installation method:
-
-<table width="100%" >
-<tr>
-<th width="33%"><a href="http://brew.sh">Homebrew</a></th>
-<th width="33%">Installer Script</th>
-<th width="33%">RubyGems</th>
-</tr>
-<tr>
-<td width="33%" align="center">macOS</td>
-<td width="33%" align="center">macOS</td>
-<td width="33%" align="center">macOS or Linux with Ruby 2.0.0 or above</td>
-</tr>
-<tr>
-<td width="33%"><code>brew cask install fastlane</code></td>
-<td width="33%"><a href="https://download.fastlane.tools">Download the zip file</a>. Then double click on the <code>install</code> script (or run it in a terminal window).</td>
-<td width="33%"><code>sudo gem install fastlane -NV</code></td>
-</tr>
-</table>
+Install _fastlane_ using
+```
+[sudo] gem install fastlane -NV
+```
+or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### multi_environment
+```
+fastlane multi_environment
+```
+Execute a lane using different environment variables
+
+#### Options
+
+* __**target_lane**__: The target lane to execute with different environment
+
+  * **environment_variable**: TARGET_LANE
+
+  * **type**: string
+
+  * **optional**: false
+
+#### Environment variables
+
+* __**ENVIRONMENT_DIRECTORY_PATH**__: The directory path of the environment info
+
+  * **type**: string
+
+  * **optional**: true
+
+
 ### appfile_init
 ```
 fastlane appfile_init
@@ -86,9 +97,9 @@ fastlane appfile_init fetch_app_identifier:false
   * **default_value**: true
 
 
-### run_tests
+### tests
 ```
-fastlane run_tests
+fastlane tests
 ```
 Build and run all Xcode tests
 
@@ -110,9 +121,9 @@ import_from_git(
 
 #### Options
 
-* __**test_scheme**__: The scheme into the Xcode project to execute, the scheme is required on the CI environement
+* __**target_scheme**__: The scheme into the Xcode project to execute, the scheme is required on the CI environement
 
-  * **environment_variable**: TEST_SCHEME
+  * **environment_variable**: TARGET_SCHEME
 
   * **type**: string
 
@@ -192,7 +203,7 @@ import_from_git(
 
   * **environment_variable**: SKIP_COCOAPODS
 
-  * **type**: string
+  * **type**: boolean
 
   * **default_value**: false
 
@@ -253,7 +264,7 @@ fastlane start_framework_release target_version:4.0.9
 
   * **environment_variable**: SKIP_COCOAPODS
 
-  * **type**: string
+  * **type**: boolean
 
   * **default_value**: false
 
@@ -330,9 +341,9 @@ import_from_git(
 
   * **optional**: true
 
-* __**test_scheme**__: The scheme into the Xcode project to execute
+* __**target_scheme**__: The scheme into the Xcode project to execute
 
-  * **environment_variable**: TEST_SCHEME
+  * **environment_variable**: TARGET_SCHEME
 
   * **type**: string
 
@@ -350,7 +361,7 @@ import_from_git(
 
   * **environment_variable**: SKIP_COCOAPODS
 
-  * **type**: string
+  * **type**: boolean
 
   * **default_value**: false
 
@@ -454,6 +465,14 @@ import_from_git(
 
   * **optional**: false
 
+* __**target_scheme**__: The scheme into the Xcode project get version number
+
+  * **environment_variable**: TARGET_SCHEME
+
+  * **type**: string
+
+  * **optional**: false on CI
+
 * __**xcodeproj**__: Your xcodeproj path
 
   * **environment_variable**: XCODEPROJ
@@ -508,6 +527,14 @@ import_from_git(
 ```
 
 #### Options
+
+* __**target_scheme**__: The scheme into the Xcode project to execute, the scheme is required on the CI environement
+
+  * **environment_variable**: TARGET_SCHEME
+
+  * **type**: string
+
+  * **optional**: false on CI
 
 * __**xcodeproj**__: The Xcode project to select.
 
