@@ -7,7 +7,7 @@ s.authors = "Digipolitan"
 s.source = { :git => "https://github.com/Digipolitan/collection-view-grid-layout.git", :tag => "v#{s.version}" }
 s.license = { :type => "BSD", :file => "LICENSE" }
 s.source_files = 'Sources/**/*.{swift,h}'
-s.ios.deployment_target = '8.0'
+s.ios.deployment_target = '9.0'
 s.tvos.deployment_target = '9.0'
 s.requires_arc = true
 end

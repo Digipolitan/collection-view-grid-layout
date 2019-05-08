@@ -16,7 +16,7 @@ end
 abstract_target 'Tests' do
 	use_frameworks!
 	target 'CollectionViewGridLayoutTests-iOS' do
-		platform :ios, '8.0'
+		platform :ios, '9.0'
 	end
 
 	target 'CollectionViewGridLayoutTests-tvOS' do
@@ -29,7 +29,7 @@ abstract_target 'Samples' do
 	use_frameworks!
 	target 'CollectionViewGridLayoutSample-iOS' do
 		project 'Samples/CollectionViewGridLayoutSample-iOS/CollectionViewGridLayoutSample-iOS'
-		platform :ios, '8.0'
+		platform :ios, '9.0'
 	end
 
 	target 'CollectionViewGridLayoutSample-tvOS' do

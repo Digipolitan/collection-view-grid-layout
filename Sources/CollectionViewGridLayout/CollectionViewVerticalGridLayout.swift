@@ -114,7 +114,7 @@ open class CollectionViewVerticalGridLayout: UICollectionViewLayout {
         }
         let headerHeight = gridLayoutDelegate.collectionView?(collectionView, layout: self, heightForHeaderInSection: section) ?? 0
         if headerHeight > 0 {
-            let headerLayoutAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, with: IndexPath(item: 0, section: section))
+            let headerLayoutAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, with: IndexPath(item: 0, section: section))
             headerLayoutAttributes.frame = CGRect(x: 0, y: position, width: collectionView.bounds.width, height: headerHeight)
             position += headerHeight
             return headerLayoutAttributes
@@ -128,7 +128,7 @@ open class CollectionViewVerticalGridLayout: UICollectionViewLayout {
         }
         let footerHeight = gridLayoutDelegate.collectionView?(collectionView, layout: self, heightForFooterInSection: section) ?? 0
         if footerHeight > 0 {
-            let footerLayoutAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, with: IndexPath(item: 0, section: section))
+            let footerLayoutAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, with: IndexPath(item: 0, section: section))
             footerLayoutAttributes.frame = CGRect(x: 0, y: position, width: collectionView.bounds.width, height: footerHeight)
             position += footerHeight
             return footerLayoutAttributes
@@ -172,7 +172,7 @@ open class CollectionViewVerticalGridLayout: UICollectionViewLayout {
             if let header = layoutAttributes.header, header.frame.intersects(rect) {
                 res.append(header)
             }
-            res.append(contentsOf: layoutAttributes.items.flatMap { $0.frame.intersects(rect) ? $0 : nil })
+            res.append(contentsOf: layoutAttributes.items.compactMap { $0.frame.intersects(rect) ? $0 : nil })
             if let footer = layoutAttributes.footer, footer.frame.intersects(rect) {
                 res.append(footer)
             }
@@ -190,7 +190,7 @@ open class CollectionViewVerticalGridLayout: UICollectionViewLayout {
 
 public extension CollectionViewVerticalGridLayout {
 
-    public enum Defaults {
+    enum Defaults {
         public static let numberOfColumns: Int = 1
         public static let rowSpacing: CGFloat = 0
         public static let columnSpacing: CGFloat = 0
@@ -199,7 +199,7 @@ public extension CollectionViewVerticalGridLayout {
         public static let sectionInset: UIEdgeInsets = .zero
     }
 
-    public struct MeasureInfo {
+    struct MeasureInfo {
 
         public let numberOfColumns: Int
         public let rowSpacing: CGFloat

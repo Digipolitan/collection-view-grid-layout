@@ -18,11 +18,11 @@ public class BaseViewController: UIViewController {
                                       forCellWithReuseIdentifier: PathCollectionViewCell.identifier)
 
         self.collectionView.register(UINib(nibName: String(describing: CollectionReusableView.self), bundle: nil),
-                                     forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                      withReuseIdentifier: CollectionReusableView.identifier)
 
         self.collectionView.register(UINib(nibName: String(describing: CollectionReusableView.self), bundle: nil),
-                                     forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
+                                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                                      withReuseIdentifier: CollectionReusableView.identifier)
     }
 }
