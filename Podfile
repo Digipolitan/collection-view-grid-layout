@@ -4,7 +4,7 @@ workspace 'CollectionViewGridLayout.xcworkspace'
 abstract_target 'Frameworks' do
 	use_frameworks!
 	target 'CollectionViewGridLayout-iOS' do
-		platform :ios, '8.0'
+		platform :ios, '9.0'
 	end
 
 	target 'CollectionViewGridLayout-tvOS' do
