@@ -42,7 +42,7 @@ $ brew install carthage
 To integrate CollectionViewGridLayout into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```
-github 'Digipolitan/collection-view-grid-layout ~> 2.0
+github 'Digipolitan/collection-view-grid-layout ~> 2.1
 ```
 
 Run `carthage update` to build the framework and drag the built `CollectionViewGridLayout.framework` into your Xcode project.
