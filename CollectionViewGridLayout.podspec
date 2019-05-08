@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = "CollectionViewGridLayout"
-s.version = "2.0.0"
+s.version = "2.1.0"
 s.summary = "Layout that allows you to display collection of data in grid with only very few lines of codes."
 s.homepage = "https://github.com/Digipolitan/collection-view-grid-layout"
 s.authors = "Digipolitan"
